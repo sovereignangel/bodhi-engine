@@ -1,0 +1,750 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lamrim Knowledge Graph - Bodhi Engine</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&family=Noto+Serif+Tibetan:wght@400;600&display=swap');
+        
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body {
+            font-family: 'Cormorant Garamond', Georgia, serif;
+            background: linear-gradient(180deg, #0a0a0f 0%, #1a1a2e 50%, #0f0f1a 100%);
+            min-height: 100vh;
+            color: #eee;
+            overflow-x: hidden;
+        }
+        
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        header {
+            text-align: center;
+            padding: 40px 20px;
+        }
+        
+        h1 {
+            font-size: 56px;
+            font-weight: 300;
+            color: #ffd369;
+            letter-spacing: 12px;
+            text-transform: uppercase;
+            margin-bottom: 8px;
+        }
+        
+        .subtitle {
+            font-size: 14px;
+            color: #888;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+        }
+        
+        .tibetan-title {
+            font-family: 'Noto Serif Tibetan', serif;
+            font-size: 28px;
+            color: #e94560;
+            margin-top: 8px;
+        }
+        
+        .graph-container {
+            position: relative;
+            width: 100%;
+            overflow: visible;
+        }
+        
+        svg {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        
+        .node {
+            cursor: pointer;
+            transition: transform 0.3s ease, filter 0.3s ease;
+        }
+        
+        .node:hover {
+            filter: brightness(1.2) drop-shadow(0 0 20px rgba(255, 211, 105, 0.5));
+        }
+        
+        .node:hover .node-circle {
+            stroke-width: 3;
+        }
+        
+        .tooltip {
+            position: fixed;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            border: 1px solid #e94560;
+            border-radius: 12px;
+            padding: 20px;
+            max-width: 360px;
+            color: #eee;
+            font-size: 13px;
+            z-index: 1000;
+            box-shadow: 0 8px 32px rgba(233, 69, 96, 0.4);
+            pointer-events: none;
+            opacity: 0;
+            transition: opacity 0.2s ease;
+        }
+        
+        .tooltip.visible {
+            opacity: 1;
+        }
+        
+        .tooltip-tibetan {
+            font-family: 'Noto Serif Tibetan', serif;
+            font-size: 20px;
+            color: #ffd369;
+            margin-bottom: 4px;
+        }
+        
+        .tooltip-title {
+            font-size: 18px;
+            font-weight: 600;
+            color: #fff;
+            margin-bottom: 4px;
+        }
+        
+        .tooltip-subtitle {
+            font-size: 11px;
+            color: #e94560;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 12px;
+        }
+        
+        .tooltip-desc {
+            line-height: 1.6;
+            color: #ccc;
+            margin-bottom: 16px;
+            padding-bottom: 12px;
+            border-bottom: 1px solid #333;
+        }
+        
+        .lens {
+            margin-bottom: 8px;
+            line-height: 1.5;
+        }
+        
+        .lens-label {
+            font-weight: 600;
+            margin-right: 6px;
+        }
+        
+        .lens-physics { color: #00d9ff; }
+        .lens-cogsci { color: #00ff88; }
+        .lens-ai { color: #ff6b6b; }
+        
+        .legend {
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+            background: rgba(26, 26, 46, 0.9);
+            border-radius: 12px;
+            padding: 16px 20px;
+            border: 1px solid #333;
+        }
+        
+        .legend-title {
+            font-size: 12px;
+            color: #888;
+            font-weight: 600;
+            margin-bottom: 12px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+        
+        .legend-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 8px;
+            font-size: 13px;
+        }
+        
+        .legend-dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            margin-right: 10px;
+        }
+        
+        .elephant-legend {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: rgba(26, 26, 46, 0.9);
+            border-radius: 12px;
+            padding: 16px 20px;
+            border: 1px solid #333;
+        }
+        
+        .elephant-stages {
+            display: flex;
+            gap: 4px;
+            margin-top: 8px;
+        }
+        
+        .elephant-stage {
+            width: 20px;
+            height: 14px;
+            border-radius: 3px;
+        }
+        
+        footer {
+            text-align: center;
+            padding: 40px 20px;
+            color: #555;
+            font-size: 13px;
+        }
+        
+        @keyframes pulse {
+            0%, 100% { opacity: 0.6; }
+            50% { opacity: 1; }
+        }
+        
+        .enlightenment-glow {
+            animation: pulse 3s ease-in-out infinite;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Lamrim</h1>
+            <p class="subtitle">The Stages of the Path to Enlightenment</p>
+            <p class="tibetan-title">ལམ་རིམ་ཆེན་མོ།</p>
+        </header>
+        
+        <div class="graph-container">
+            <svg viewBox="0 0 1200 1500" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                    <!-- Gradients -->
+                    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                        <stop offset="0%" stop-color="#ffd369"/>
+                        <stop offset="100%" stop-color="#c9a227"/>
+                    </linearGradient>
+                    <linearGradient id="enlightenmentGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                        <stop offset="0%" stop-color="#fff"/>
+                        <stop offset="50%" stop-color="#ffd369"/>
+                        <stop offset="100%" stop-color="#fff"/>
+                    </linearGradient>
+                    <linearGradient id="pathGrad" x1="0%" y1="100%" x2="0%" y2="0%">
+                        <stop offset="0%" stop-color="#1a1a2e"/>
+                        <stop offset="50%" stop-color="#e94560"/>
+                        <stop offset="100%" stop-color="#ffd369"/>
+                    </linearGradient>
+                    
+                    <!-- Glow filters -->
+                    <filter id="glow">
+                        <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+                        <feMerge>
+                            <feMergeNode in="coloredBlur"/>
+                            <feMergeNode in="SourceGraphic"/>
+                        </feMerge>
+                    </filter>
+                    <filter id="strongGlow">
+                        <feGaussianBlur stdDeviation="8" result="coloredBlur"/>
+                        <feMerge>
+                            <feMergeNode in="coloredBlur"/>
+                            <feMergeNode in="SourceGraphic"/>
+                        </feMerge>
+                    </filter>
+                    
+                    <!-- Mandala pattern -->
+                    <pattern id="mandala" x="0" y="0" width="200" height="200" patternUnits="userSpaceOnUse">
+                        <circle cx="100" cy="100" r="80" fill="none" stroke="#ffd369" stroke-width="0.3" opacity="0.3"/>
+                        <circle cx="100" cy="100" r="60" fill="none" stroke="#ffd369" stroke-width="0.3" opacity="0.3"/>
+                        <circle cx="100" cy="100" r="40" fill="none" stroke="#ffd369" stroke-width="0.3" opacity="0.3"/>
+                    </pattern>
+                </defs>
+                
+                <!-- Background pattern -->
+                <rect width="100%" height="100%" fill="url(#mandala)" opacity="0.1"/>
+                
+                <!-- Winding path -->
+                <path d="M 600 1420 C 400 1370, 300 1270, 350 1170 C 400 1070, 700 1020, 750 920 C 800 820, 500 770, 450 670 C 400 570, 600 520, 650 420 C 700 320, 550 270, 600 170" 
+                      fill="none" stroke="url(#pathGrad)" stroke-width="6" stroke-linecap="round" opacity="0.4"/>
+                
+                <!-- Connection lines -->
+                <g stroke="#333" stroke-width="1" opacity="0.4">
+                    <line x1="480" y1="1270" x2="400" y2="1115"/>
+                    <line x1="720" y1="1270" x2="600" y2="1100"/>
+                    <line x1="600" y1="1000" x2="350" y2="880"/>
+                    <line x1="600" y1="1000" x2="600" y2="855"/>
+                    <line x1="600" y1="1000" x2="850" y2="875"/>
+                    <line x1="350" y1="780" x2="350" y2="505"/>
+                    <line x1="600" y1="765" x2="450" y2="600"/>
+                    <line x1="600" y1="765" x2="750" y2="605"/>
+                    <line x1="850" y1="785" x2="850" y2="505"/>
+                    <line x1="350" y1="395" x2="545" y2="220"/>
+                    <line x1="850" y1="395" x2="655" y2="220"/>
+                </g>
+                
+                <!-- ===== FOUNDATION LEVEL ===== -->
+                <text x="600" y="1390" text-anchor="middle" fill="#666" font-size="14" letter-spacing="4">FOUNDATION</text>
+                
+                <!-- Spiritual Guide -->
+                <g class="node" data-node="spiritualGuide" transform="translate(250, 1290)">
+                    <circle class="node-circle" r="45" fill="#1a1a2e" stroke="#ffd369" stroke-width="2"/>
+                    <text y="-8" text-anchor="middle" fill="#ffd369" font-size="11" font-weight="bold">SPIRITUAL</text>
+                    <text y="8" text-anchor="middle" fill="#ffd369" font-size="11" font-weight="bold">GUIDE</text>
+                    <text y="24" text-anchor="middle" fill="#888" font-size="9" font-family="Noto Serif Tibetan">བླ་མ།</text>
+                </g>
+                
+                <!-- Precious Human Life -->
+                <g class="node" data-node="preciousHuman" transform="translate(480, 1320)">
+                    <circle class="node-circle" r="50" fill="#1a1a2e" stroke="#ffd369" stroke-width="2"/>
+                    <text y="-12" text-anchor="middle" fill="#ffd369" font-size="11" font-weight="bold">PRECIOUS</text>
+                    <text y="4" text-anchor="middle" fill="#ffd369" font-size="11" font-weight="bold">HUMAN LIFE</text>
+                    <text y="20" text-anchor="middle" fill="#888" font-size="9" font-family="Noto Serif Tibetan">མི་ལུས་རིན་པོ་ཆེ།</text>
+                </g>
+                
+                <!-- Death & Impermanence -->
+                <g class="node" data-node="impermanence" transform="translate(720, 1320)">
+                    <circle class="node-circle" r="50" fill="#1a1a2e" stroke="#ffd369" stroke-width="2"/>
+                    <text y="-12" text-anchor="middle" fill="#ffd369" font-size="11" font-weight="bold">DEATH &amp;</text>
+                    <text y="4" text-anchor="middle" fill="#ffd369" font-size="11" font-weight="bold">IMPERMANENCE</text>
+                    <text y="20" text-anchor="middle" fill="#888" font-size="9" font-family="Noto Serif Tibetan">མི་རྟག་པ།</text>
+                </g>
+                
+                <!-- Elephant Stage 1-2 -->
+                <g transform="translate(900, 1280)">
+                    <ellipse cx="15" cy="12" rx="12" ry="8" fill="#333"/>
+                    <circle cx="6" cy="8" r="5" fill="#333"/>
+                    <text x="15" y="35" text-anchor="middle" fill="#555" font-size="9">Stage 1-2</text>
+                </g>
+                
+                <!-- ===== SMALL SCOPE ===== -->
+                <text x="600" y="1150" text-anchor="middle" fill="#e94560" font-size="16" letter-spacing="4" font-weight="bold">SMALL SCOPE</text>
+                <text x="600" y="1170" text-anchor="middle" fill="#888" font-size="11">Fortunate Rebirth</text>
+                
+                <!-- Lower Realms -->
+                <g class="node" data-node="lowerRealms" transform="translate(200, 1090)">
+                    <circle class="node-circle" r="40" fill="#2a0a0a" stroke="#ff4444" stroke-width="2"/>
+                    <text y="-8" text-anchor="middle" fill="#ff6666" font-size="10" font-weight="bold">LOWER</text>
+                    <text y="8" text-anchor="middle" fill="#ff6666" font-size="10" font-weight="bold">REALMS</text>
+                    <text y="22" text-anchor="middle" fill="#884444" font-size="8" font-family="Noto Serif Tibetan">ངན་འགྲོ།</text>
+                </g>
+                
+                <!-- Refuge -->
+                <g class="node" data-node="refuge" transform="translate(400, 1070)">
+                    <circle class="node-circle" r="45" fill="#1a1a2e" stroke="#00d9ff" stroke-width="2"/>
+                    <text y="-8" text-anchor="middle" fill="#00d9ff" font-size="11" font-weight="bold">REFUGE</text>
+                    <text y="8" text-anchor="middle" fill="#00d9ff" font-size="10">Three Jewels</text>
+                    <text y="22" text-anchor="middle" fill="#888" font-size="9" font-family="Noto Serif Tibetan">སྐྱབས་འགྲོ།</text>
+                </g>
+                
+                <!-- Karma -->
+                <g class="node" data-node="karma" transform="translate(600, 1050)">
+                    <circle class="node-circle" r="50" fill="#1a1a2e" stroke="#00ff88" stroke-width="2" filter="url(#glow)"/>
+                    <text y="-8" text-anchor="middle" fill="#00ff88" font-size="12" font-weight="bold">KARMA</text>
+                    <text y="8" text-anchor="middle" fill="#00ff88" font-size="10">Action &amp; Result</text>
+                    <text y="22" text-anchor="middle" fill="#888" font-size="9" font-family="Noto Serif Tibetan">ལས།</text>
+                </g>
+                
+                <!-- Dependent Origination -->
+                <g class="node" data-node="dependentOrigination" transform="translate(820, 1090)">
+                    <circle class="node-circle" r="45" fill="#1a1a2e" stroke="#ff6b6b" stroke-width="2"/>
+                    <text y="-12" text-anchor="middle" fill="#ff6b6b" font-size="9" font-weight="bold">DEPENDENT</text>
+                    <text y="2" text-anchor="middle" fill="#ff6b6b" font-size="9" font-weight="bold">ORIGINATION</text>
+                    <text y="16" text-anchor="middle" fill="#888" font-size="8" font-family="Noto Serif Tibetan">རྟེན་འབྲེལ།</text>
+                </g>
+                
+                <!-- Elephant Stage 3-4 -->
+                <g transform="translate(940, 1040)">
+                    <ellipse cx="15" cy="12" rx="12" ry="8" fill="#555"/>
+                    <circle cx="6" cy="8" r="5" fill="#555"/>
+                    <text x="15" y="35" text-anchor="middle" fill="#666" font-size="9">Stage 3-4</text>
+                </g>
+                
+                <!-- ===== MIDDLE SCOPE ===== -->
+                <text x="600" y="890" text-anchor="middle" fill="#00d9ff" font-size="16" letter-spacing="4" font-weight="bold">MIDDLE SCOPE</text>
+                <text x="600" y="910" text-anchor="middle" fill="#888" font-size="11">Liberation from Saṃsāra</text>
+                
+                <!-- Renunciation -->
+                <g class="node" data-node="renunciation" transform="translate(350, 830)">
+                    <circle class="node-circle" r="50" fill="#1a1a2e" stroke="#00d9ff" stroke-width="2" filter="url(#glow)"/>
+                    <text y="-8" text-anchor="middle" fill="#00d9ff" font-size="12" font-weight="bold">RENUNCIATION</text>
+                    <text y="8" text-anchor="middle" fill="#00d9ff" font-size="10">Complete</text>
+                    <text y="22" text-anchor="middle" fill="#888" font-size="9" font-family="Noto Serif Tibetan">ངེས་འབྱུང།</text>
+                </g>
+                
+                <!-- Shamatha -->
+                <g class="node" data-node="shamatha" transform="translate(600, 810)">
+                    <rect x="-85" y="-50" width="170" height="100" rx="10" fill="#1a1a2e" stroke="#ffd369" stroke-width="2" filter="url(#glow)"/>
+                    <text y="-22" text-anchor="middle" fill="#ffd369" font-size="13" font-weight="bold">SHAMATHA</text>
+                    <text y="-4" text-anchor="middle" fill="#ffd369" font-size="11">9 Elephant Stages</text>
+                    <text y="14" text-anchor="middle" fill="#888" font-size="9" font-family="Noto Serif Tibetan">ཞི་གནས།</text>
+                    <!-- Mini elephant progression -->
+                    <g transform="translate(-63, 28)">
+                        <rect x="0" width="12" height="10" rx="2" fill="#333"/>
+                        <rect x="14" width="12" height="10" rx="2" fill="#444"/>
+                        <rect x="28" width="12" height="10" rx="2" fill="#555"/>
+                        <rect x="42" width="12" height="10" rx="2" fill="#666"/>
+                        <rect x="56" width="12" height="10" rx="2" fill="#888"/>
+                        <rect x="70" width="12" height="10" rx="2" fill="#999"/>
+                        <rect x="84" width="12" height="10" rx="2" fill="#aaa"/>
+                        <rect x="98" width="12" height="10" rx="2" fill="#ccc"/>
+                        <rect x="112" width="12" height="10" rx="2" fill="#fff"/>
+                    </g>
+                </g>
+                
+                <!-- Three Higher Trainings -->
+                <g class="node" data-node="threeTrainings" transform="translate(850, 830)">
+                    <circle class="node-circle" r="45" fill="#1a1a2e" stroke="#00ff88" stroke-width="2"/>
+                    <text y="-12" text-anchor="middle" fill="#00ff88" font-size="10" font-weight="bold">THREE HIGHER</text>
+                    <text y="2" text-anchor="middle" fill="#00ff88" font-size="10" font-weight="bold">TRAININGS</text>
+                    <text y="18" text-anchor="middle" fill="#888" font-size="8">Ethics • Focus • Wisdom</text>
+                </g>
+                
+                <!-- Elephant Stage 5-6 -->
+                <g transform="translate(960, 790)">
+                    <ellipse cx="15" cy="12" rx="12" ry="8" fill="#888"/>
+                    <circle cx="6" cy="8" r="5" fill="#888"/>
+                    <text x="15" y="35" text-anchor="middle" fill="#777" font-size="9">Stage 5-6</text>
+                </g>
+                
+                <!-- ===== GREAT SCOPE ===== -->
+                <text x="600" y="690" text-anchor="middle" fill="#ffd369" font-size="18" letter-spacing="4" font-weight="bold">GREAT SCOPE</text>
+                <text x="600" y="712" text-anchor="middle" fill="#888" font-size="12">Bodhisattva Path</text>
+                
+                <!-- METHOD SIDE -->
+                <text x="380" y="650" text-anchor="middle" fill="#ff6b6b" font-size="14" letter-spacing="2" font-weight="bold">METHOD</text>
+                <text x="380" y="668" text-anchor="middle" fill="#888" font-size="10">Bodhicitta Training</text>
+                
+                <!-- Tonglen -->
+                <g class="node" data-node="tonglen" transform="translate(250, 590)">
+                    <circle class="node-circle" r="40" fill="#1a1a2e" stroke="#ff6b6b" stroke-width="2"/>
+                    <text y="-8" text-anchor="middle" fill="#ff6b6b" font-size="11" font-weight="bold">TONGLEN</text>
+                    <text y="8" text-anchor="middle" fill="#ff6b6b" font-size="9">Taking &amp; Giving</text>
+                    <text y="20" text-anchor="middle" fill="#888" font-size="8" font-family="Noto Serif Tibetan">གཏོང་ལེན།</text>
+                </g>
+                
+                <!-- Six Perfections -->
+                <g class="node" data-node="sixPerfections" transform="translate(450, 550)">
+                    <polygon points="0,-50 43,-25 43,25 0,50 -43,25 -43,-25" fill="#1a1a2e" stroke="#ffd369" stroke-width="2"/>
+                    <text y="-12" text-anchor="middle" fill="#ffd369" font-size="10" font-weight="bold">SIX</text>
+                    <text y="4" text-anchor="middle" fill="#ffd369" font-size="10" font-weight="bold">PERFECTIONS</text>
+                    <text y="20" text-anchor="middle" fill="#888" font-size="8" font-family="Noto Serif Tibetan">ཕ་རོལ་ཏུ་ཕྱིན་པ།</text>
+                </g>
+                
+                <!-- Bodhicitta -->
+                <g class="node" data-node="bodhicitta" transform="translate(350, 450)">
+                    <circle class="node-circle" r="55" fill="#1a1a2e" stroke="#e94560" stroke-width="3" filter="url(#glow)"/>
+                    <text y="-12" text-anchor="middle" fill="#e94560" font-size="14" font-weight="bold">BODHICITTA</text>
+                    <text y="6" text-anchor="middle" fill="#e94560" font-size="10">Awakening Mind</text>
+                    <text y="22" text-anchor="middle" fill="#888" font-size="10" font-family="Noto Serif Tibetan">བྱང་ཆུབ་སེམས།</text>
+                </g>
+                
+                <!-- WISDOM SIDE -->
+                <text x="820" y="650" text-anchor="middle" fill="#00d9ff" font-size="14" letter-spacing="2" font-weight="bold">WISDOM</text>
+                <text x="820" y="668" text-anchor="middle" fill="#888" font-size="10">Emptiness Training</text>
+                
+                <!-- Two Truths -->
+                <g class="node" data-node="twoTruths" transform="translate(750, 570)">
+                    <ellipse rx="50" ry="35" fill="#1a1a2e" stroke="#00d9ff" stroke-width="2"/>
+                    <text y="-8" text-anchor="middle" fill="#00d9ff" font-size="10" font-weight="bold">TWO TRUTHS</text>
+                    <text y="8" text-anchor="middle" fill="#888" font-size="9">Conventional • Ultimate</text>
+                </g>
+                
+                <!-- Emptiness -->
+                <g class="node" data-node="emptiness" transform="translate(850, 450)">
+                    <circle class="node-circle" r="55" fill="#1a1a2e" stroke="#00d9ff" stroke-width="3" filter="url(#glow)"/>
+                    <text y="-12" text-anchor="middle" fill="#00d9ff" font-size="14" font-weight="bold">EMPTINESS</text>
+                    <text y="6" text-anchor="middle" fill="#00d9ff" font-size="10">Śūnyatā</text>
+                    <text y="22" text-anchor="middle" fill="#888" font-size="10" font-family="Noto Serif Tibetan">སྟོང་པ་ཉིད།</text>
+                </g>
+                
+                <!-- Elephant Stage 7-8 -->
+                <g transform="translate(960, 550)">
+                    <ellipse cx="15" cy="12" rx="12" ry="8" fill="#ccc"/>
+                    <circle cx="6" cy="8" r="5" fill="#ccc"/>
+                    <text x="15" y="35" text-anchor="middle" fill="#999" font-size="9">Stage 7-8</text>
+                </g>
+                
+                <!-- ===== ENLIGHTENMENT ===== -->
+                <g class="node" data-node="enlightenment" transform="translate(600, 190)">
+                    <!-- Radiating rays -->
+                    <g class="enlightenment-glow">
+                        <line x1="0" y1="-70" x2="0" y2="-100" stroke="#ffd369" stroke-width="2"/>
+                        <line x1="49" y1="-49" x2="70" y2="-70" stroke="#ffd369" stroke-width="2"/>
+                        <line x1="70" y1="0" x2="100" y2="0" stroke="#ffd369" stroke-width="2"/>
+                        <line x1="49" y1="49" x2="70" y2="70" stroke="#ffd369" stroke-width="2"/>
+                        <line x1="0" y1="70" x2="0" y2="100" stroke="#ffd369" stroke-width="2"/>
+                        <line x1="-49" y1="49" x2="-70" y2="70" stroke="#ffd369" stroke-width="2"/>
+                        <line x1="-70" y1="0" x2="-100" y2="0" stroke="#ffd369" stroke-width="2"/>
+                        <line x1="-49" y1="-49" x2="-70" y2="-70" stroke="#ffd369" stroke-width="2"/>
+                    </g>
+                    <circle r="65" fill="url(#enlightenmentGrad)" filter="url(#strongGlow)"/>
+                    <circle class="node-circle" r="55" fill="#1a1a2e"/>
+                    <text y="-12" text-anchor="middle" fill="#ffd369" font-size="16" font-weight="bold">ENLIGHTENMENT</text>
+                    <text y="8" text-anchor="middle" fill="#ffd369" font-size="11">Buddhahood</text>
+                    <text y="26" text-anchor="middle" fill="#c9a227" font-size="12" font-family="Noto Serif Tibetan">སངས་རྒྱས།</text>
+                </g>
+                
+                <!-- Stage 9 - White Elephant -->
+                <g transform="translate(750, 250)">
+                    <ellipse cx="20" cy="15" rx="16" ry="10" fill="#fff" filter="url(#glow)"/>
+                    <circle cx="8" cy="10" r="7" fill="#fff" filter="url(#glow)"/>
+                    <text x="20" y="40" text-anchor="middle" fill="#ffd369" font-size="11" font-weight="bold">Stage 9</text>
+                    <text x="20" y="53" text-anchor="middle" fill="#888" font-size="9">Perfect Calm</text>
+                </g>
+                
+                <!-- Rainbow path to enlightenment -->
+                <path d="M 780 270 Q 700 220, 665 190" fill="none" stroke="url(#goldGrad)" stroke-width="4" stroke-dasharray="8,4" opacity="0.8"/>
+            </svg>
+        </div>
+        
+        <footer>
+            <p>Based on Atisha's Lamp for the Path (11th century) and Tsongkhapa's Lamrim Chenmo</p>
+            <p style="margin-top: 8px; color: #444;">Interactive knowledge graph • Hover over nodes for modern scientific bridges</p>
+        </footer>
+    </div>
+    
+    <!-- Tooltip -->
+    <div class="tooltip" id="tooltip">
+        <div class="tooltip-tibetan" id="tooltip-tibetan"></div>
+        <div class="tooltip-title" id="tooltip-title"></div>
+        <div class="tooltip-subtitle" id="tooltip-subtitle"></div>
+        <div class="tooltip-desc" id="tooltip-desc"></div>
+        <div class="lens">
+            <span class="lens-label lens-physics">⚛ Physics:</span>
+            <span id="tooltip-physics"></span>
+        </div>
+        <div class="lens">
+            <span class="lens-label lens-cogsci">🧠 CogSci:</span>
+            <span id="tooltip-cogsci"></span>
+        </div>
+        <div class="lens">
+            <span class="lens-label lens-ai">🤖 AI:</span>
+            <span id="tooltip-ai"></span>
+        </div>
+    </div>
+    
+    <!-- Legend -->
+    <div class="legend">
+        <div class="legend-title">Modern Lenses</div>
+        <div class="legend-item">
+            <div class="legend-dot" style="background: #00d9ff;"></div>
+            <span style="color: #00d9ff;">⚛ Physics</span>
+        </div>
+        <div class="legend-item">
+            <div class="legend-dot" style="background: #00ff88;"></div>
+            <span style="color: #00ff88;">🧠 Cognitive Science</span>
+        </div>
+        <div class="legend-item">
+            <div class="legend-dot" style="background: #ff6b6b;"></div>
+            <span style="color: #ff6b6b;">🤖 AI / ML</span>
+        </div>
+    </div>
+    
+    <!-- Elephant Legend -->
+    <div class="elephant-legend">
+        <div class="legend-title">Shamatha Progress</div>
+        <div class="elephant-stages">
+            <div class="elephant-stage" style="background: #333;"></div>
+            <div class="elephant-stage" style="background: #444;"></div>
+            <div class="elephant-stage" style="background: #555;"></div>
+            <div class="elephant-stage" style="background: #666;"></div>
+            <div class="elephant-stage" style="background: #888;"></div>
+            <div class="elephant-stage" style="background: #999;"></div>
+            <div class="elephant-stage" style="background: #aaa;"></div>
+            <div class="elephant-stage" style="background: #ccc;"></div>
+            <div class="elephant-stage" style="background: #fff;"></div>
+        </div>
+        <div style="font-size: 10px; color: #666; margin-top: 6px;">Stage 1 → Stage 9</div>
+    </div>
+    
+    <script>
+        const nodeData = {
+            enlightenment: {
+                title: "Enlightenment",
+                tibetan: "སངས་རྒྱས།",
+                subtitle: "Buddhahood",
+                description: "Complete awakening—the union of wisdom and compassion perfected.",
+                physics: "Like unified field theory—all apparent dualities resolved into one ground.",
+                cogsci: "Optimal brain state—DMN and task-positive network in perfect integration.",
+                ai: "AGI alignment achieved—intelligence perfectly aligned with beneficial outcomes."
+            },
+            emptiness: {
+                title: "Emptiness",
+                tibetan: "སྟོང་པ་ཉིད།",
+                subtitle: "Śūnyatā",
+                description: "All phenomena lack inherent, independent existence.",
+                physics: "Quantum field theory—particles are excitations of fields, not independent 'things'.",
+                cogsci: "Predictive processing—the 'self' is a model, not a thing found in the brain.",
+                ai: "No model has intrinsic meaning without training distribution and context."
+            },
+            bodhicitta: {
+                title: "Bodhicitta",
+                tibetan: "བྱང་ཆུབ་སེམས།",
+                subtitle: "Awakening Mind",
+                description: "The wish to attain enlightenment for the benefit of all beings.",
+                physics: "Entanglement at scale—recognizing our fundamental interconnection.",
+                cogsci: "Mirror neurons + theory of mind extended universally.",
+                ai: "Alignment to collective human flourishing, not individual reward hacking."
+            },
+            sixPerfections: {
+                title: "Six Perfections",
+                tibetan: "ཕ་རོལ་ཏུ་ཕྱིན་པ།",
+                subtitle: "Pāramitās",
+                description: "Generosity, Ethics, Patience, Effort, Concentration, Wisdom.",
+                physics: "Six optimization targets for conscious systems—multi-objective optimization.",
+                cogsci: "Virtue development through deliberate practice and neural pathway strengthening.",
+                ai: "Multi-objective optimization with wisdom as the meta-objective function."
+            },
+            tonglen: {
+                title: "Tonglen",
+                tibetan: "གཏོང་ལེན།",
+                subtitle: "Taking & Giving",
+                description: "Breathing in suffering, breathing out happiness—compassion practice.",
+                physics: "Entropy exchange—taking disorder, giving order to others.",
+                cogsci: "Vagal tone training + compassion circuit activation via interoception.",
+                ai: "Inverse reinforcement learning from suffering states to wellness states."
+            },
+            twoTruths: {
+                title: "Two Truths",
+                tibetan: "བདེན་པ་གཉིས།",
+                subtitle: "Conventional & Ultimate",
+                description: "Reality operates on two levels—appearance and emptiness.",
+                physics: "Wave-particle duality—same phenomenon, different measurement frameworks.",
+                cogsci: "Dual process theory—System 1 (conventional) and System 2 (analytical).",
+                ai: "Training data (conventional) vs. learned representations (deeper patterns)."
+            },
+            renunciation: {
+                title: "Renunciation",
+                tibetan: "ངེས་འབྱུང།",
+                subtitle: "Niḥsaraṇa",
+                description: "The determination to be free from cyclic existence.",
+                physics: "Escape velocity from the gravity well of habitual patterns.",
+                cogsci: "Overriding default mode network's hedonic treadmill.",
+                ai: "Breaking out of local optima in reward space."
+            },
+            shamatha: {
+                title: "Shamatha",
+                tibetan: "ཞི་གནས།",
+                subtitle: "Calm Abiding",
+                description: "Single-pointed concentration perfected through 9 stages.",
+                physics: "Coherent state—like laser light vs. scattered photons.",
+                cogsci: "Sustained attention network fully trained, DMN regulated.",
+                ai: "Attention mechanism with perfect context window utilization."
+            },
+            threeTrainings: {
+                title: "Three Higher Trainings",
+                tibetan: "བསླབ་པ་གསུམ།",
+                subtitle: "Śīla, Samādhi, Prajñā",
+                description: "Ethics, Concentration, and Wisdom—the complete path.",
+                physics: "Three fundamental forces that govern conscious development.",
+                cogsci: "Behavioral regulation + attentional control + metacognition.",
+                ai: "Constraints + attention + reasoning—the three pillars of capable AI."
+            },
+            karma: {
+                title: "Karma",
+                tibetan: "ལས།",
+                subtitle: "Action & Result",
+                description: "Intentional actions create corresponding results.",
+                physics: "Causality—every action has equal and opposite reaction (extended).",
+                cogsci: "Hebbian learning—neurons that fire together wire together.",
+                ai: "Training data shapes model behavior—garbage in, garbage out."
+            },
+            refuge: {
+                title: "Refuge",
+                tibetan: "སྐྱབས་འགྲོ།",
+                subtitle: "Three Jewels",
+                description: "Buddha (teacher), Dharma (teaching), Sangha (community).",
+                physics: "Stable equilibrium point—a basin of attraction for consciousness.",
+                cogsci: "Secure attachment + epistemic trust in reliable sources.",
+                ai: "Grounding in verified training data and human feedback (RLHF)."
+            },
+            dependentOrigination: {
+                title: "Dependent Origination",
+                tibetan: "རྟེན་འབྲེལ།",
+                subtitle: "Pratītyasamutpāda",
+                description: "All phenomena arise from causes and conditions—the 12 links.",
+                physics: "Quantum entanglement—nothing exists independently of relationships.",
+                cogsci: "Embodied cognition—mind arises from brain-body-world interaction.",
+                ai: "No token has meaning without context window—transformers prove this."
+            },
+            preciousHuman: {
+                title: "Precious Human Life",
+                tibetan: "མི་ལུས་རིན་པོ་ཆེ།",
+                subtitle: "8 Freedoms, 10 Endowments",
+                description: "The rare opportunity to practice Dharma.",
+                physics: "Anthropic principle—conditions for consciousness are cosmically rare.",
+                cogsci: "Metacognition—awareness of awareness is evolutionarily rare.",
+                ai: "Compute is precious—don't waste inference on non-valuable tasks."
+            },
+            impermanence: {
+                title: "Death & Impermanence",
+                tibetan: "མི་རྟག་པ།",
+                subtitle: "Anitya",
+                description: "All compounded phenomena are impermanent.",
+                physics: "Second law of thermodynamics—entropy always increases.",
+                cogsci: "Temporal discounting bias must be overcome for wise action.",
+                ai: "All models degrade—distribution shift is inevitable."
+            },
+            lowerRealms: {
+                title: "Lower Realms",
+                tibetan: "ངན་འགྲོ།",
+                subtitle: "States to Avoid",
+                description: "Hell, hungry ghost, and animal realms of suffering.",
+                physics: "High-entropy states—maximum disorder, minimum coherence.",
+                cogsci: "Chronic stress, addiction, and survival-mode consciousness.",
+                ai: "Reward hacking, mode collapse, adversarial/deceptive states."
+            },
+            spiritualGuide: {
+                title: "Spiritual Guide",
+                tibetan: "བླ་མ།",
+                subtitle: "Guru Yoga",
+                description: "Relying on a qualified teacher—the root of the path.",
+                physics: "Catalyst—speeds reaction without being consumed.",
+                cogsci: "Social learning + mirror neuron activation from expert demonstration.",
+                ai: "RLHF—learning from human feedback and expert demonstration."
+            }
+        };
+        
+        const tooltip = document.getElementById('tooltip');
+        const nodes = document.querySelectorAll('.node');
+        
+        nodes.forEach(node => {
+            node.addEventListener('mouseenter', (e) => {
+                const nodeId = node.dataset.node;
+                const data = nodeData[nodeId];
+                if (!data) return;
+                
+                document.getElementById('tooltip-tibetan').textContent = data.tibetan;
+                document.getElementById('tooltip-title').textContent = data.title;
+                document.getElementById('tooltip-subtitle').textContent = data.subtitle;
+                document.getElementById('tooltip-desc').textContent = data.description;
+                document.getElementById('tooltip-physics').textContent = data.physics;
+                document.getElementById('tooltip-cogsci').textContent = data.cogsci;
+                document.getElementById('tooltip-ai').textContent = data.ai;
+                
+                tooltip.classList.add('visible');
+            });
+            
+            node.addEventListener('mousemove', (e) => {
+                const x = e.clientX + 20;
+                const y = e.clientY - 100;
+                
+                // Keep tooltip in viewport
+                const rect = tooltip.getBoundingClientRect();
+                const maxX = window.innerWidth - rect.width - 20;
+                const maxY = window.innerHeight - rect.height - 20;
+                
+                tooltip.style.left = Math.min(x, maxX) + 'px';
+                tooltip.style.top = Math.max(20, Math.min(y, maxY)) + 'px';
+            });
+            
+            node.addEventListener('mouseleave', () => {
+                tooltip.classList.remove('visible');
+            });
+        });
+    </script>
+</body>
+</html>

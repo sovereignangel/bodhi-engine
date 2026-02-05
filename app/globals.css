@@ -1,0 +1,90 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --bodhi-gold: #ffd369;
+    --bodhi-gold-dark: #c9a227;
+    --bodhi-pink: #e94560;
+    --bodhi-cyan: #00d9ff;
+    --bodhi-green: #00ff88;
+    --bodhi-red: #ff6b6b;
+    --bodhi-bg-dark: #0a0a0f;
+    --bodhi-bg-mid: #1a1a2e;
+    --bodhi-bg-light: #16213e;
+  }
+
+  body {
+    @apply bg-bodhi-bg-dark text-gray-100;
+    font-family: 'Cormorant Garamond', Georgia, serif;
+  }
+
+  /* Custom scrollbar for dark theme */
+  ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    @apply bg-bodhi-bg-dark;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @apply bg-bodhi-bg-light rounded-full;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-bodhi-gold/50;
+  }
+}
+
+@layer components {
+  .thangka-card {
+    @apply bg-bodhi-bg-mid border border-bodhi-gold/20 rounded-xl p-6;
+    @apply shadow-lg shadow-bodhi-gold/5;
+  }
+
+  .thangka-card-hover {
+    @apply thangka-card transition-all duration-300;
+    @apply hover:border-bodhi-gold/40 hover:shadow-bodhi-gold/10;
+  }
+
+  .gold-button {
+    @apply px-6 py-3 bg-gradient-to-r from-bodhi-gold to-bodhi-gold-dark;
+    @apply text-bodhi-bg-dark font-semibold rounded-lg;
+    @apply transition-all duration-300;
+    @apply hover:shadow-lg hover:shadow-bodhi-gold/30;
+  }
+
+  .lens-tab {
+    @apply px-4 py-2 rounded-lg text-sm font-medium transition-all;
+    @apply hover:bg-bodhi-bg-light;
+  }
+
+  .lens-tab-active {
+    @apply lens-tab bg-bodhi-bg-light;
+  }
+
+  .glow-gold {
+    filter: drop-shadow(0 0 8px rgba(255, 211, 105, 0.5));
+  }
+
+  .glow-pink {
+    filter: drop-shadow(0 0 8px rgba(233, 69, 96, 0.5));
+  }
+
+  .glow-cyan {
+    filter: drop-shadow(0 0 8px rgba(0, 217, 255, 0.5));
+  }
+}
+
+@layer utilities {
+  .text-shadow-gold {
+    text-shadow: 0 0 20px rgba(255, 211, 105, 0.3);
+  }
+
+  .border-glow-gold {
+    box-shadow: 0 0 15px rgba(255, 211, 105, 0.2);
+  }
+}
