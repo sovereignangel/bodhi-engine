@@ -3,7 +3,7 @@
 
 import type { NodeData, NodeId } from '@/types/node'
 
-export const nodeData: Record<NodeId, NodeData> = {
+export const nodeData: Partial<Record<NodeId, NodeData>> = {
   enlightenment: {
     title: 'Enlightenment',
     tibetan: 'སངས་རྒྱས།',
@@ -174,6 +174,6 @@ export const nodesByScope = {
 export const allNodeIds: NodeId[] = Object.values(nodesByScope).flat()
 
 // Get node by ID with type safety
-export function getNode(id: NodeId): NodeData {
+export function getNode(id: NodeId): NodeData | undefined {
   return nodeData[id]
 }

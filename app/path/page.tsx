@@ -30,7 +30,16 @@ interface NodeMeta {
   scope: string
 }
 
-const nodes: Record<NodeId, NodeMeta> = {
+type PathNodeId =
+  | 'spiritualGuide' | 'preciousHuman' | 'impermanence'
+  | 'lowerRealms' | 'refuge' | 'karma' | 'dependentOrigination'
+  | 'renunciation' | 'shamatha'
+  | 'tonglen' | 'bodhicitta' | 'sixPerfections'
+  | 'emptiness' | 'vipashyana'
+  | 'pointingOut' | 'fourYogas'
+  | 'enlightenment'
+
+const nodes: Record<PathNodeId, NodeMeta> = {
   // Foundation (bottom) — y: 960
   spiritualGuide: { x: 180, y: 960, r: 20, scope: 'foundation' },
   preciousHuman: { x: 350, y: 960, r: 20, scope: 'foundation' },
@@ -67,7 +76,7 @@ const nodes: Record<NodeId, NodeMeta> = {
 // EDGES — directed relationships
 // ─────────────────────────────────────────────
 
-const edges: [NodeId, NodeId][] = [
+const edges: [PathNodeId, PathNodeId][] = [
   ['spiritualGuide', 'preciousHuman'],
   ['preciousHuman', 'impermanence'],
   ['impermanence', 'lowerRealms'],
@@ -105,10 +114,10 @@ const scopeBands = [
 ]
 
 // Three Principal Aspects — the golden spine
-const spineNodes: NodeId[] = ['renunciation', 'bodhicitta', 'emptiness', 'enlightenment']
+const spineNodes: PathNodeId[] = ['renunciation', 'bodhicitta', 'emptiness', 'enlightenment']
 
 // Mahamudra path — the meditation path from Brown's framework
-const mahamudraNodes: NodeId[] = ['shamatha', 'vipashyana', 'pointingOut', 'fourYogas']
+const mahamudraNodes: PathNodeId[] = ['shamatha', 'vipashyana', 'pointingOut', 'fourYogas']
 
 // ─────────────────────────────────────────────
 // SVG COMPONENTS
@@ -240,7 +249,7 @@ function shortLabel(id: NodeId): string {
     pointingOut: 'Pointing Out',
     fourYogas: 'Four Yogas',
   }
-  return map[id] ?? nodeData[id].title
+  return map[id] ?? nodeData[id]?.title ?? id
 }
 
 // ─────────────────────────────────────────────
@@ -248,7 +257,7 @@ function shortLabel(id: NodeId): string {
 // ─────────────────────────────────────────────
 
 export default function PathPage() {
-  const [selectedNode, setSelectedNode] = useState<NodeId | null>(null)
+  const [selectedNode, setSelectedNode] = useState<PathNodeId | null>(null)
   const [activeLens, setActiveLens] = useState<LensKey | null>(null)
 
   const selected = selectedNode ? nodeData[selectedNode] : null
@@ -401,7 +410,7 @@ export default function PathPage() {
               })}
 
               {/* ── Nodes ── */}
-              {(Object.keys(nodes) as NodeId[]).map((id) => {
+              {(Object.keys(nodes) as PathNodeId[]).map((id) => {
                 const n = nodes[id]
                 const isSelected = selectedNode === id
                 const isSpine = spineNodes.includes(id)
@@ -424,7 +433,7 @@ export default function PathPage() {
                         setActiveLens(null)
                       }
                     }}
-                    aria-label={nodeData[id].title}
+                    aria-label={nodeData[id]?.title}
                   >
                     {/* Larger tap target */}
                     <circle cx={n.x} cy={n.y} r={n.r + 14} fill="transparent" />
@@ -607,7 +616,7 @@ export default function PathPage() {
                           }}
                           className="font-sans text-[11px] px-3 py-1.5 rounded-full border border-bodhi-border hover:border-bodhi-saffron text-bodhi-text-secondary hover:text-bodhi-saffron transition-all"
                         >
-                          {nodeData[otherId].title}
+                          {nodeData[otherId]?.title}
                         </button>
                       ))}
                     </div>
@@ -691,7 +700,7 @@ export default function PathPage() {
                     <div className="flex flex-wrap gap-1.5">
                       {connectedNodes.map((otherId) => (
                         <button key={otherId} onClick={() => { setSelectedNode(otherId); setActiveLens(null) }} className="font-sans text-[11px] px-3 py-1.5 rounded-full border border-bodhi-border text-bodhi-text-secondary hover:text-bodhi-saffron transition-all">
-                          {nodeData[otherId].title}
+                          {nodeData[otherId]?.title}
                         </button>
                       ))}
                     </div>

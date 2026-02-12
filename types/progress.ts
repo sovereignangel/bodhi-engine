@@ -1,6 +1,7 @@
 // User progress types for localStorage persistence
 
 import type { LensType } from './node'
+import type { CurriculumViewMode } from './teaching'
 
 export interface UserProgress {
   version: number
@@ -8,6 +9,7 @@ export interface UserProgress {
 
   streak: StreakData
   dailyTeaching: DailyTeachingProgress
+  curriculum: CurriculumProgress
   conceptEngagement: Record<string, ConceptEngagement>
   shamatha: ShamathaProgress
   preferences: UserPreferences
@@ -25,6 +27,14 @@ export interface DailyTeachingProgress {
   cycleStartDate: string // ISO date string
   completedDays: number[] // Array of completed day numbers
   lastViewedDate: string // ISO date string
+}
+
+export interface CurriculumProgress {
+  currentDay: number // 1-365
+  yearStartDate: string // When user started this year's cycle
+  completedDays: number[] // Completed day numbers (1-365)
+  lastViewedDate: string
+  viewMode: CurriculumViewMode
 }
 
 export interface ConceptEngagement {
@@ -57,7 +67,7 @@ export interface UserPreferences {
 
 // Default initial progress state
 export const DEFAULT_USER_PROGRESS: UserProgress = {
-  version: 1,
+  version: 2,
   userId: '',
 
   streak: {
@@ -72,6 +82,14 @@ export const DEFAULT_USER_PROGRESS: UserProgress = {
     cycleStartDate: new Date().toISOString().split('T')[0],
     completedDays: [],
     lastViewedDate: '',
+  },
+
+  curriculum: {
+    currentDay: 1,
+    yearStartDate: new Date().toISOString().split('T')[0],
+    completedDays: [],
+    lastViewedDate: '',
+    viewMode: 'progressive',
   },
 
   conceptEngagement: {},

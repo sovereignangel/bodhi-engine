@@ -1,0 +1,1352 @@
+[
+  {
+    "day": 305,
+    "month": "four-yogas",
+    "season": "integration",
+    "week": 44,
+    "title": "Entering the First Yoga: One-Pointedness",
+    "tibetan": "རྩེ་གཅིག",
+    "transliteration": "rtse gcig",
+    "tradition": "mahamudra",
+    "scope": "great-wisdom",
+    "tags": ["four-yogas", "mahamudra", "awareness", "pointing-out"],
+    "conceptId": "onePointedness",
+    "teaching": {
+      "source": "Wangchuk Dorje, Mahamudra: Ocean of Definitive Meaning, Ch. 8",
+      "text": "After receiving the pointing-out instruction, the practitioner enters the first yoga: one-pointedness. Here, the recognition of awareness-itself that was introduced by the guru must be stabilized through sustained practice. The mind learns to remain with this recognition without wandering.",
+      "commentary": "One-pointedness is the foundation of all four yogas. It is like learning to balance on a bicycle — at first, every gust of thought knocks you off, but gradually the recognition holds steady through all conditions."
+    },
+    "lenses": {
+      "physics": {
+        "bridge": "Stabilizing a quantum measurement repeatedly to confirm a state",
+        "details": "In quantum mechanics, repeated measurements of a prepared state yield consistent results. Similarly, in one-pointedness the practitioner repeatedly 'measures' awareness-itself and confirms the same recognition, building statistical confidence in the nature of mind."
+      },
+      "cogsci": {
+        "bridge": "Attentional stability and default mode network quieting",
+        "details": "Neuroscience research on advanced meditators shows decreased default mode network activity during sustained recognition. One-pointedness corresponds to a stable attentional state where mind-wandering diminishes and meta-awareness becomes continuous."
+      },
+      "ai": {
+        "bridge": "Convergence of a training loop toward a stable attractor",
+        "details": "An AI model's training converges when the loss function stabilizes. One-pointedness resembles this convergence — the practitioner's recognition stabilizes as distracting 'noise' in the system decreases and the signal of awareness becomes clear."
+      }
+    },
+    "meditation": {
+      "duration": "30-45 min",
+      "posture": "Seven-point Vairochana posture, spine erect, gaze slightly downward, hands in equipoise mudra",
+      "method": "Begin by settling the body and taking three deep breaths. Recall the pointing-out instruction from your teacher. Rest in the recognition of awareness-itself — not concentrating on any object, but simply being present as awareness. When thoughts arise, notice that they arise within awareness and do not leave it. Return to the bare recognition each time you notice distraction. Gradually extend the duration of stable recognition. Close by dedicating the merit of practice."
+    },
+    "citation": {
+      "author": "Wangchuk Dorje (9th Karmapa)",
+      "work": "Mahamudra: Ocean of Definitive Meaning",
+      "detail": "Chapter 8: The Yoga of One-Pointedness",
+      "quote": "When the mind rests one-pointedly in its own nature, without being distracted by anything whatsoever, this is called the yoga of one-pointedness."
+    },
+    "journalPrompt": "When you rest as awareness today, how long does the recognition last before distraction pulls you away? What form does the distraction usually take?",
+    "reflectionPrompt": "What is the difference between concentrating on something and resting as awareness itself?"
+  },
+  {
+    "day": 306,
+    "month": "four-yogas",
+    "season": "integration",
+    "week": 44,
+    "title": "Lesser One-Pointedness: Initial Stability",
+    "tibetan": "རྩེ་གཅིག་ཆུང་བ",
+    "transliteration": "rtse gcig chung ba",
+    "tradition": "mahamudra",
+    "scope": "great-wisdom",
+    "tags": ["four-yogas", "mahamudra", "awareness", "non-dual"],
+    "conceptId": "onePointedness",
+    "teaching": {
+      "source": "Dakpo Tashi Namgyal, Mahamudra: The Moonlight, Part III",
+      "text": "In lesser one-pointedness, the practitioner can sustain recognition of awareness for short periods but loses it frequently. The recognition comes and goes like sunlight breaking through clouds. There is still a strong sense of effort and a meditator who is 'doing' the practice.",
+      "commentary": "This stage is characterized by what the texts call 'short moments, many times.' The practitioner does not try to hold recognition forcefully but returns to it again and again with gentle persistence."
+    },
+    "lenses": {
+      "physics": {
+        "bridge": "Intermittent signal detection with increasing signal-to-noise ratio",
+        "details": "Like a radio tuning in to a faint station, the signal of awareness-recognition comes and goes at first. The practitioner's task is not to amplify the signal but to reduce the noise of conceptual elaboration so the ever-present signal becomes apparent."
+      },
+      "cogsci": {
+        "bridge": "Skill acquisition and the early phase of procedural learning",
+        "details": "In cognitive science, early skill acquisition is effortful and inconsistent. The practitioner at this stage is building new neural pathways for sustained meta-awareness, much like a musician learning a difficult passage — halting at first, then increasingly fluent."
+      },
+      "ai": {
+        "bridge": "Early training epochs with high variance in model outputs",
+        "details": "In the first epochs of neural network training, outputs fluctuate widely. Lesser one-pointedness resembles these early epochs — the 'model' of recognition is being trained, and stability has not yet been achieved."
+      }
+    },
+    "meditation": {
+      "duration": "30-45 min",
+      "posture": "Seven-point posture, relaxed yet alert, eyes gently open with soft downward gaze",
+      "method": "Settle the body and mind with a few breaths. Invoke the guru's blessing and recall the pointing-out moment. Let awareness recognize itself. When you notice you have been lost in thought, simply return to the recognition without self-criticism. Count or note how many times you return — this returning is the practice itself. Allow short sessions of clear recognition interspersed with brief rests. End with dedication."
+    },
+    "citation": {
+      "author": "Dakpo Tashi Namgyal",
+      "work": "Mahamudra: The Moonlight",
+      "detail": "Part III: The Four Yogas",
+      "quote": "At first the recognition of mind-nature is like a stream tumbling down a steep mountain — unstable, rushing, frequently interrupted. Do not be discouraged. Continue with short moments, many times."
+    },
+    "journalPrompt": "How do you relate to the experience of 'losing' recognition? Do you react with frustration, or can you see each return as a fresh beginning?",
+    "reflectionPrompt": "Is there truly a moment when awareness is absent, or only a moment when you notice you forgot?"
+  },
+  {
+    "day": 307,
+    "month": "four-yogas",
+    "season": "integration",
+    "week": 44,
+    "title": "Middling One-Pointedness: Growing Stability",
+    "tibetan": "རྩེ་གཅིག་འབྲིང་བ",
+    "transliteration": "rtse gcig 'bring ba",
+    "tradition": "mahamudra",
+    "scope": "great-wisdom",
+    "tags": ["four-yogas", "mahamudra", "awareness", "non-dual"],
+    "conceptId": "onePointedness",
+    "teaching": {
+      "source": "Wangchuk Dorje, Mahamudra: Ocean of Definitive Meaning, Ch. 8",
+      "text": "In middling one-pointedness, the practitioner can sustain recognition for longer stretches. Thoughts still arise, but they are recognized immediately as movements within awareness. The practitioner discovers that thoughts and awareness are not enemies — thoughts arise from awareness and dissolve back into it.",
+      "commentary": "This stage is like a river entering a wide valley — the turbulence calms, and the flow becomes more even. The meditator still notices effort, but the gaps between recognition become shorter and shorter."
+    },
+    "lenses": {
+      "physics": {
+        "bridge": "A damped oscillation approaching equilibrium",
+        "details": "Like a pendulum gradually losing amplitude as it settles to rest, the oscillation between recognition and distraction dampens. The system of mind is approaching its natural equilibrium state — awareness recognizing itself continuously."
+      },
+      "cogsci": {
+        "bridge": "Automatization of attentional control through sustained practice",
+        "details": "As a skill becomes automatic, it requires less executive control. At middling one-pointedness, the recognition begins to self-sustain with less volitional effort, reflecting increased efficiency in the neural circuits supporting meta-awareness."
+      },
+      "ai": {
+        "bridge": "Mid-training convergence with decreasing loss variance",
+        "details": "In the middle phase of training, a neural network's loss curve smooths out and begins reliably decreasing. The model has learned the general pattern even if fine details remain. Similarly, recognition is becoming the default even as refinement continues."
+      }
+    },
+    "meditation": {
+      "duration": "30-45 min",
+      "posture": "Seven-point posture, body deeply relaxed, eyes open in natural gaze",
+      "method": "Settle naturally without elaborate preliminaries. Let awareness recognize itself immediately upon sitting. Notice thoughts as they arise — do not suppress them, but see their nature as awareness-in-motion. Practice recognizing that the thought and the awareness of the thought are not two different things. Extend the session gradually, allowing recognition to carry itself. If stability wavers, relax more deeply rather than tightening effort. Dedicate the merit."
+    },
+    "citation": {
+      "author": "Wangchuk Dorje (9th Karmapa)",
+      "work": "Mahamudra: Ocean of Definitive Meaning",
+      "detail": "Chapter 8: Middling One-Pointedness",
+      "quote": "When mind rests in its own nature and thoughts arise without disturbing that rest, like waves arising from the ocean without leaving the ocean, this is middling one-pointedness."
+    },
+    "journalPrompt": "Today, notice the relationship between thoughts and awareness. Can you see that thoughts arise within awareness rather than replacing it?",
+    "reflectionPrompt": "Does awareness need thoughts to stop in order to be recognized, or can recognition include the movement of thought?"
+  },
+  {
+    "day": 308,
+    "month": "four-yogas",
+    "season": "integration",
+    "week": 44,
+    "title": "Greater One-Pointedness: Unwavering Stability",
+    "tibetan": "རྩེ་གཅིག་ཆེན་པོ",
+    "transliteration": "rtse gcig chen po",
+    "tradition": "mahamudra",
+    "scope": "great-wisdom",
+    "tags": ["four-yogas", "mahamudra", "awareness", "non-dual"],
+    "conceptId": "onePointedness",
+    "teaching": {
+      "source": "Gampopa, Jewel Ornament of Liberation, Ch. 20",
+      "text": "At greater one-pointedness, the recognition of awareness-itself becomes continuous and unwavering. The practitioner no longer wobbles between recognition and forgetting. Day and night, in meditation and post-meditation, the taste of awareness remains constant.",
+      "commentary": "This is the culmination of the first yoga. The practitioner has stabilized what was introduced in the pointing-out. Like a person who has fully learned to ride a bicycle, the balance of recognition is now second nature."
+    },
+    "lenses": {
+      "physics": {
+        "bridge": "A system that has fully reached thermodynamic equilibrium",
+        "details": "At equilibrium, all macroscopic variables remain constant over time. Greater one-pointedness is the cognitive equivalent — awareness rests in its natural state without fluctuation. External perturbations may occur, but the system returns instantly to equilibrium."
+      },
+      "cogsci": {
+        "bridge": "Automatized expertise where meta-awareness is effortless and continuous",
+        "details": "Expert performers maintain awareness of their performance without conscious effort. At greater one-pointedness, meta-awareness of mind-nature has become fully automatized — the practitioner is always aware of being aware without needing to check."
+      },
+      "ai": {
+        "bridge": "A converged model at a stable local minimum in the loss landscape",
+        "details": "When a model has converged, its parameters are stable and its outputs are consistent. Greater one-pointedness is this convergence — the recognition is locked in, and the 'model' of awareness reliably outputs the same clear recognition regardless of input."
+      }
+    },
+    "meditation": {
+      "duration": "45-60 min",
+      "posture": "Seven-point posture held naturally, body and mind united in effortless rest",
+      "method": "Simply sit and let awareness be as it is. There is no need to 'do' anything — awareness naturally recognizes itself. Allow this session to extend without time pressure. Notice that recognition is present whether you are attending to the breath, to thoughts, to sounds, or to nothing in particular. Test the stability by intentionally generating thoughts and seeing if recognition is disturbed. Rest in the unwavering nature of this recognition. Dedicate."
+    },
+    "citation": {
+      "author": "Gampopa",
+      "work": "Jewel Ornament of Liberation",
+      "detail": "Chapter 20: Mahamudra Meditation",
+      "quote": "When the mind continuously remains in its own nature without wavering, like a candle flame in a room without wind, the yoga of one-pointedness is complete."
+    },
+    "journalPrompt": "Reflect on your journey through one-pointedness. What has changed in the quality of your recognition since you first received the pointing-out instruction?",
+    "reflectionPrompt": "If awareness-recognition has become continuous, who or what is noticing that it is continuous?"
+  },
+  {
+    "day": 309,
+    "month": "four-yogas",
+    "season": "integration",
+    "week": 45,
+    "title": "Brown on One-Pointedness: Staying as Awareness",
+    "tibetan": "རིག་པའི་ངང་ལ་གནས་པ",
+    "transliteration": "rig pa'i ngang la gnas pa",
+    "tradition": "mahamudra",
+    "scope": "great-wisdom",
+    "tags": ["four-yogas", "mahamudra", "awareness", "pointing-out"],
+    "conceptId": "onePointedness",
+    "teaching": {
+      "source": "Daniel P. Brown, Pointing Out the Great Way, Ch. 11",
+      "text": "Brown emphasizes that one-pointedness in the Mahamudra context is fundamentally different from shamatha concentration. The practitioner is not focusing on an object — not the breath, not a visualization, not a mantra. Instead, awareness rests as itself, recognizing its own nature continuously.",
+      "commentary": "This distinction is crucial. Many practitioners confuse Mahamudra one-pointedness with ordinary concentration. Brown clarifies that here the 'one point' is awareness itself — not an object of attention but the subject recognizing itself."
+    },
+    "lenses": {
+      "physics": {
+        "bridge": "Self-referential systems and the observer observing itself",
+        "details": "In physics, the measurement problem involves the observer affecting the observed. In one-pointedness, the observer IS the observed — awareness recognizes itself. This self-referential loop is the 'one point' that Brown describes."
+      },
+      "cogsci": {
+        "bridge": "The difference between focal attention and open monitoring with meta-awareness",
+        "details": "Cognitive science distinguishes focused attention (FA) from open monitoring (OM). Brown's description of one-pointedness maps onto a third category beyond both — pure awareness, where meta-cognitive monitoring is directed at the nature of awareness itself rather than at any content."
+      },
+      "ai": {
+        "bridge": "Self-supervised learning where the system learns from its own representations",
+        "details": "In self-supervised learning, a model learns by predicting aspects of its own input. One-pointedness resembles this — awareness 'learns' about itself by attending to its own nature, with no external training signal required."
+      }
+    },
+    "meditation": {
+      "duration": "30-45 min",
+      "posture": "Comfortable seated posture, spine upright but relaxed, eyes softly open",
+      "method": "Following Brown's instructions: begin by dropping all techniques. Do not focus on the breath or any object. Instead, notice that you are aware. Turn awareness toward itself — not as an effortful act but as a simple recognition. Stay with this. When thoughts arise, let them arise and pass without engaging them, while keeping recognition of awareness as the foreground. Notice that awareness is present whether thoughts are moving or still. This staying-with is the practice. Close with dedication."
+    },
+    "citation": {
+      "author": "Daniel P. Brown",
+      "work": "Pointing Out the Great Way",
+      "detail": "Chapter 11: The Yoga of One-Pointedness",
+      "quote": "One-pointedness does not mean concentrating on an object. It means that awareness stays with its own recognition of itself, one-pointedly, without wavering. The 'one point' is awareness-itself."
+    },
+    "journalPrompt": "Can you distinguish between concentrating on something (an object, a sensation) and simply resting as awareness? What does the difference feel like in your experience?",
+    "reflectionPrompt": "If awareness is not an object you can concentrate on, how do you 'stay with' it?"
+  },
+  {
+    "day": 310,
+    "month": "four-yogas",
+    "season": "integration",
+    "week": 45,
+    "title": "Awareness Through Movement and Stillness",
+    "tibetan": "གཡོ་གནས་ཀུན་ཏུ་རིག་པ",
+    "transliteration": "g.yo gnas kun tu rig pa",
+    "tradition": "mahamudra",
+    "scope": "great-wisdom",
+    "tags": ["four-yogas", "mahamudra", "awareness", "non-dual"],
+    "conceptId": "onePointedness",
+    "teaching": {
+      "source": "Daniel P. Brown, Pointing Out the Great Way, Ch. 11",
+      "text": "Brown teaches that in one-pointedness, the practitioner discovers awareness is present whether the mind is still or moving. When thoughts arise, that is awareness-in-motion. When thoughts are absent, that is awareness-at-rest. Both are equally awareness. Neither state is better or worse for recognition.",
+      "commentary": "This insight dissolves the common misconception that meditation requires a still mind. The practitioner of one-pointedness discovers that the texture of experience changes but awareness itself does not. Movement and stillness are both flavors of the same awareness."
+    },
+    "lenses": {
+      "physics": {
+        "bridge": "Conservation laws: the invariant quantity underlying changing phenomena",
+        "details": "In physics, conserved quantities like energy remain constant even as the system transforms. Awareness is the 'conserved quantity' of consciousness — whether the mind is turbulent or calm, the fundamental nature of awareness is invariant."
+      },
+      "cogsci": {
+        "bridge": "Trait versus state distinctions in consciousness research",
+        "details": "Cognitive science distinguishes between transient states (calm, agitated) and enduring traits. One-pointedness reveals awareness as an enduring 'trait' of consciousness that persists across all state changes, much like background wakefulness underlies all specific mental states."
+      },
+      "ai": {
+        "bridge": "An invariant feature extracted across diverse input distributions",
+        "details": "In deep learning, invariant features remain consistent across transformations of input data. Awareness-across-movement-and-stillness resembles an invariant representation that the system has learned to extract regardless of whether inputs are noisy or clean."
+      }
+    },
+    "meditation": {
+      "duration": "30-45 min",
+      "posture": "Seven-point posture, relaxed alertness, eyes open with natural gaze",
+      "method": "Rest as awareness. Now deliberately generate a thought — perhaps recall what you ate yesterday. Notice: is awareness present during the thought? Now let the thought dissolve and rest in stillness. Notice: is awareness present in the gap? Alternate several times between deliberately generating thoughts and resting in stillness. Discover for yourself that awareness is unchanged by the presence or absence of thoughts. Rest in this discovery. Let the alternation become natural, without deliberate generation. Dedicate the merit."
+    },
+    "citation": {
+      "author": "Daniel P. Brown",
+      "work": "Pointing Out the Great Way",
+      "detail": "Chapter 11: Movement and Stillness",
+      "quote": "Whether thoughts move or the mind is still, awareness is always the same awareness. The practitioner of one-pointedness recognizes this sameness — awareness is present in both movement and stillness without any change in its nature."
+    },
+    "journalPrompt": "During today's practice, what did you discover about awareness during thought-movement versus stillness? Were you surprised?",
+    "reflectionPrompt": "If awareness is present in both movement and stillness, what exactly changes when a thought arises?"
+  },
+  {
+    "day": 311,
+    "month": "four-yogas",
+    "season": "integration",
+    "week": 45,
+    "title": "Not Concentration but Resting AS Awareness",
+    "tibetan": "རིག་པའི་ངང་ལ་བཞག",
+    "transliteration": "rig pa'i ngang la bzhag",
+    "tradition": "mahamudra",
+    "scope": "great-wisdom",
+    "tags": ["four-yogas", "mahamudra", "awareness", "pointing-out"],
+    "conceptId": "onePointedness",
+    "teaching": {
+      "source": "Daniel P. Brown, Pointing Out the Great Way, Ch. 11",
+      "text": "Brown repeatedly emphasizes: one-pointedness is NOT concentration on an object. It is resting AS awareness while experiences flow. Concentration implies a subject grasping at an object. In one-pointedness, there is no subject-object duality — there is just awareness being itself, and experiences appearing within it.",
+      "commentary": "This subtle but essential distinction separates Mahamudra one-pointedness from all forms of shamatha. The practitioner is not 'doing' meditation — they are 'being' awareness. The experiences that flow are not obstacles but the natural display of awareness itself."
+    },
+    "lenses": {
+      "physics": {
+        "bridge": "Shifting from particle-view to field-view in quantum mechanics",
+        "details": "Particle physics focuses on discrete objects; quantum field theory sees particles as excitations of underlying fields. Similarly, concentration focuses on discrete objects of attention, while one-pointedness rests as the 'field' of awareness within which all objects arise as excitations."
+      },
+      "cogsci": {
+        "bridge": "The difference between attention-to-object and awareness-of-awareness",
+        "details": "Most cognitive models treat attention as object-directed. Recent phenomenological research recognizes a category of 'pure awareness' distinct from attention to content — a background awareness of being aware. This maps precisely to Brown's distinction."
+      },
+      "ai": {
+        "bridge": "The difference between attending to inputs and being the processing architecture itself",
+        "details": "A neural network processes inputs through its architecture. Concentration is like attending to specific inputs. One-pointedness is like the architecture becoming aware of itself as architecture — not looking at data, but recognizing its own nature as a processing system."
+      }
+    },
+    "meditation": {
+      "duration": "30-45 min",
+      "posture": "Seated comfortably, spine upright, body relaxed, eyes gently open",
+      "method": "Begin with a brief moment of shamatha — focus on the breath for one minute. Now release the breath as an object. Notice: what remains when you stop concentrating on anything? There is still awareness. Rest as that awareness. Experiences continue to flow — sounds, sensations, thoughts — but you are not concentrating on any of them. You are resting as the awareness within which they all appear. If you catch yourself concentrating on something, relax and release the object. Return to being awareness rather than attending to things. Dedicate the merit."
+    },
+    "citation": {
+      "author": "Daniel P. Brown",
+      "work": "Pointing Out the Great Way",
+      "detail": "Chapter 11: Resting as Awareness",
+      "quote": "This is not concentration. You are not concentrating on awareness as if it were an object. You are resting as awareness itself. Awareness recognizes itself. There is nothing else to do."
+    },
+    "journalPrompt": "Can you notice the subtle difference between concentrating on awareness (making it an object) and resting as awareness (being it)? When does one shift to the other?",
+    "reflectionPrompt": "If you are not concentrating on anything, and yet you are fully present, what is this presence made of?"
+  },
+  {
+    "day": 312,
+    "month": "four-yogas",
+    "season": "integration",
+    "week": 45,
+    "title": "One-Pointedness in Daily Life",
+    "tibetan": "རྗེས་ཐོབ་རྩེ་གཅིག",
+    "transliteration": "rjes thob rtse gcig",
+    "tradition": "mahamudra",
+    "scope": "great-wisdom",
+    "tags": ["four-yogas", "mahamudra", "awareness", "integration"],
+    "conceptId": "onePointedness",
+    "teaching": {
+      "source": "Daniel P. Brown, Pointing Out the Great Way, Ch. 11",
+      "text": "One-pointedness is not confined to the meditation seat. Brown teaches that the practitioner must carry recognition into all activities — walking, eating, conversing, working. The test of genuine one-pointedness is whether awareness-recognition persists when you stand up from the cushion and enter daily life.",
+      "commentary": "Post-meditation practice bridges the gap between formal sessions and ordinary experience. The practitioner gradually discovers that awareness does not depend on sitting quietly — it is equally present in the midst of activity. This integration marks the completion of the first yoga."
+    },
+    "lenses": {
+      "physics": {
+        "bridge": "A physical law that holds in all reference frames, not just in the laboratory",
+        "details": "The laws of physics are not confined to controlled laboratory conditions — they hold everywhere. Similarly, the 'law' of awareness-recognition must hold in all conditions of daily life, not just in the controlled conditions of formal meditation."
+      },
+      "cogsci": {
+        "bridge": "Transfer of learning from training context to novel environments",
+        "details": "Cognitive science studies how skills learned in one context transfer to others. The challenge of post-meditation practice is precisely this transfer problem — can the recognition cultivated on the cushion generalize to the very different context of daily activity?"
+      },
+      "ai": {
+        "bridge": "Model generalization from training data to real-world deployment",
+        "details": "A model trained on curated data must generalize to messy real-world inputs. One-pointedness in daily life is the 'deployment' test — the recognition must work not just in the clean training environment of formal meditation but in the noisy, unpredictable conditions of everyday experience."
+      }
+    },
+    "meditation": {
+      "duration": "All day (formal session 20-30 min, then continuous practice)",
+      "posture": "Formal session: seated posture. Daily life: any posture, any activity",
+      "method": "Begin with a short formal session to establish recognition. Then carry this recognition into your first activity after the session. As you stand up, notice: is awareness still here? As you walk, notice. As you eat breakfast, notice. Set gentle reminders throughout the day — each time you pass through a doorway, check: am I still resting as awareness? Do not force it; simply notice and return. In the evening, reflect on how the recognition fared throughout the day. Dedicate the merit of the entire day's practice."
+    },
+    "citation": {
+      "author": "Daniel P. Brown",
+      "work": "Pointing Out the Great Way",
+      "detail": "Chapter 11: Post-Meditation Practice",
+      "quote": "The real test of one-pointedness is not what happens on the cushion but what happens when you get up. If awareness-recognition vanishes the moment you begin daily activities, it has not yet become stable. Keep practicing."
+    },
+    "journalPrompt": "Track your awareness throughout one full day. In which activities does recognition persist most easily? Where does it seem to vanish?",
+    "reflectionPrompt": "Is there any activity in which awareness is truly absent, or do you simply forget to notice it?"
+  },
+  {
+    "day": 313,
+    "month": "four-yogas",
+    "season": "integration",
+    "week": 45,
+    "title": "Entering the Second Yoga: Simplicity",
+    "tibetan": "སྤྲོས་བྲལ",
+    "transliteration": "spros bral",
+    "tradition": "mahamudra",
+    "scope": "great-wisdom",
+    "tags": ["four-yogas", "mahamudra", "awareness", "non-dual", "emptiness"],
+    "conceptId": "simplicity",
+    "teaching": {
+      "source": "Dakpo Tashi Namgyal, Mahamudra: The Moonlight, Part III",
+      "text": "Having stabilized one-pointedness, the practitioner now investigates the nature of awareness itself. This is the yoga of simplicity — freedom from conceptual elaboration. The practitioner turns awareness upon itself and asks: what is this awareness? Where is it located? What color is it? What shape?",
+      "commentary": "Simplicity does not mean simplifying something complex. It means discovering that awareness is already beyond all conceptual elaboration — it cannot be found, grasped, described, or pinned down, yet it is undeniably present. This is not nihilism but the discovery of awareness's unfindable nature."
+    },
+    "lenses": {
+      "physics": {
+        "bridge": "The vacuum state in quantum field theory — empty yet containing all potential",
+        "details": "The quantum vacuum is not truly empty — it teems with virtual particles and potential. Similarly, simplicity reveals that awareness is 'empty' of findable characteristics yet is the source of all experience. It is not nothing — it is the pregnant ground of all that appears."
+      },
+      "cogsci": {
+        "bridge": "The hard problem of consciousness — awareness cannot be reduced to its contents",
+        "details": "Neuroscience can study the contents of consciousness but cannot locate consciousness itself. Simplicity is the meditative discovery of what philosophers call 'the hard problem' — awareness is undeniably present but cannot be found as any particular thing."
+      },
+      "ai": {
+        "bridge": "Trying to find the 'intelligence' in a neural network by examining individual weights",
+        "details": "You cannot locate the 'intelligence' of a neural network in any single weight, layer, or activation. It is an emergent property that cannot be pinned down. Simplicity is the discovery that awareness similarly cannot be located in any neuron, brain region, or measurable quantity."
+      }
+    },
+    "meditation": {
+      "duration": "30-45 min",
+      "posture": "Seven-point posture, relaxed and stable, eyes open in spacious gaze",
+      "method": "First, establish one-pointedness — rest as awareness for several minutes until recognition is stable. Now turn awareness upon itself and investigate: where is this awareness? Look for it in the body — is it in the head? The heart? Look for its boundaries — where does it begin and end? Look for its qualities — does it have a color, a shape, a size? Notice what you find. Each time you think you have found something, look more closely. Discover the unfindable nature of awareness. Rest in that discovery. Dedicate."
+    },
+    "citation": {
+      "author": "Dakpo Tashi Namgyal",
+      "work": "Mahamudra: The Moonlight",
+      "detail": "Part III: The Yoga of Simplicity",
+      "quote": "When you search for the mind and cannot find it anywhere — not inside, not outside, not in between — and yet you cannot deny that there is knowing, this is the entry into simplicity."
+    },
+    "journalPrompt": "When you searched for awareness today, what did you find? Describe the experience of looking for something that cannot be found yet is undeniably present.",
+    "reflectionPrompt": "If awareness has no location, no size, no color, and no shape, does it exist? If it does not exist, what is reading these words right now?"
+  },
+  {
+    "day": 314,
+    "month": "four-yogas",
+    "season": "integration",
+    "week": 45,
+    "title": "Lesser Simplicity: Beginning to See Through",
+    "tibetan": "སྤྲོས་བྲལ་ཆུང་བ",
+    "transliteration": "spros bral chung ba",
+    "tradition": "mahamudra",
+    "scope": "great-wisdom",
+    "tags": ["four-yogas", "mahamudra", "awareness", "emptiness"],
+    "conceptId": "simplicity",
+    "teaching": {
+      "source": "Wangchuk Dorje, Mahamudra: Ocean of Definitive Meaning, Ch. 9",
+      "text": "In lesser simplicity, the practitioner begins to see through conceptual frameworks but still reverts to habitual ways of thinking. The insight into awareness's unfindable nature is genuine but intermittent. The practitioner may have moments of profound openness followed by the return of ordinary conceptual mind.",
+      "commentary": "At this stage, the practitioner's conceptual frameworks begin to crack. There are glimpses of freedom from elaboration, but the habit of constructing concepts about awareness — what it is, what it means, where this practice is going — still reasserts itself."
+    },
+    "lenses": {
+      "physics": {
+        "bridge": "Initial phase transitions where a material begins to change state",
+        "details": "At the onset of a phase transition, the material fluctuates between states — partly solid, partly liquid. Lesser simplicity is this liminal zone where the conceptual 'solid' of ordinary mind is melting but has not yet fully transformed into the 'fluid' of freedom from elaboration."
+      },
+      "cogsci": {
+        "bridge": "Cognitive decentering — the ability to observe thoughts as mental events rather than truths",
+        "details": "Metacognitive research shows that decentering — seeing thoughts as events rather than facts — develops gradually. Lesser simplicity extends this to a radical degree: not just individual thoughts but the entire conceptual framework of 'meditator,' 'meditation,' and 'awareness' begin to be seen through."
+      },
+      "ai": {
+        "bridge": "Feature ablation revealing that no single feature captures the model's 'knowledge'",
+        "details": "When researchers ablate features in a neural network, they discover that knowledge is distributed — no single feature contains it. Lesser simplicity is the practitioner's version of this discovery: no single concept contains what awareness is."
+      }
+    },
+    "meditation": {
+      "duration": "30-45 min",
+      "posture": "Seven-point posture, spacious and open, eyes gazing into open space",
+      "method": "Establish recognition of awareness. Now investigate: you have been calling this 'awareness' — but is that label accurate? Can you find what the word 'awareness' points to? Look for the referent of the concept. Notice that every concept you apply to awareness falls short. Let go of the concept 'awareness.' Let go of the concept 'meditation.' Let go of the concept 'practitioner.' What remains when all labels are released? Rest in that — not as a concept of 'resting' but as the raw, unlabeled experience itself. Dedicate."
+    },
+    "citation": {
+      "author": "Wangchuk Dorje (9th Karmapa)",
+      "work": "Mahamudra: Ocean of Definitive Meaning",
+      "detail": "Chapter 9: Lesser Simplicity",
+      "quote": "At first, simplicity comes and goes. The practitioner sees through elaboration for a moment, then falls back into conceptual mind. This oscillation is natural. Do not grasp at the seeing-through or reject the falling-back."
+    },
+    "journalPrompt": "What concepts about meditation and awareness do you still hold tightly? Can you notice yourself constructing a story about your spiritual progress?",
+    "reflectionPrompt": "When you let go of the concept 'awareness,' does awareness disappear? What does this tell you about the relationship between concepts and reality?"
+  },
+  {
+    "day": 315,
+    "month": "four-yogas",
+    "season": "integration",
+    "week": 45,
+    "title": "Middling Simplicity: Elaboration Falls Away",
+    "tibetan": "སྤྲོས་བྲལ་འབྲིང་བ",
+    "transliteration": "spros bral 'bring ba",
+    "tradition": "mahamudra",
+    "scope": "great-wisdom",
+    "tags": ["four-yogas", "mahamudra", "awareness", "emptiness", "non-dual"],
+    "conceptId": "simplicity",
+    "teaching": {
+      "source": "Dakpo Tashi Namgyal, Mahamudra: The Moonlight, Part III",
+      "text": "At middling simplicity, the practitioner's investigation deepens. Not only is awareness unfindable, but the one who searches is equally unfindable. The meditator looking for awareness is itself an appearance within awareness. Searcher and searched-for dissolve together into the simplicity of what is.",
+      "commentary": "This is a crucial turning point. The subject-object structure of investigation collapses. There is no longer an investigator on one side and awareness on the other. The entire framework of spiritual seeking begins to unravel — and this unraveling is itself the path."
+    },
+    "lenses": {
+      "physics": {
+        "bridge": "Godel's incompleteness theorem applied to self-referential systems",
+        "details": "Godel showed that no formal system can fully prove its own consistency from within itself. Similarly, awareness cannot 'find' itself as an object of investigation because the investigator IS awareness. The impossibility of the search is not a failure but a revelation of the system's self-referential nature."
+      },
+      "cogsci": {
+        "bridge": "The dissolution of the narrative self under deep introspection",
+        "details": "Neuroscience reveals that the 'self' is a construct of the default mode network. In middling simplicity, not only are thoughts seen through, but the sense of being a 'meditator' — a self who practices — is itself recognized as a mental construction without inherent reality."
+      },
+      "ai": {
+        "bridge": "The paradox of a system trying to fully model itself",
+        "details": "A computational system cannot fully model itself without infinite regress. The attempt of awareness to find itself as an object encounters the same paradox — and in simplicity, this paradox is resolved not by succeeding in the search but by letting the search dissolve."
+      }
+    },
+    "meditation": {
+      "duration": "30-45 min",
+      "posture": "Seven-point posture, utterly relaxed, open gaze, no sense of efforting",
+      "method": "Rest as awareness. Now ask: who is resting? Look for the one who is aware. Search for the meditator. Is there a solid, findable 'self' who is doing this practice? Examine carefully. Notice that the searcher cannot find itself — because the searcher IS what is being searched for. Let the search dissolve. What remains is not confusion but a profound simplicity — experience happening without an experiencer, awareness without a self who is aware. Rest here. Dedicate."
+    },
+    "citation": {
+      "author": "Dakpo Tashi Namgyal",
+      "work": "Mahamudra: The Moonlight",
+      "detail": "Part III: Middling Simplicity",
+      "quote": "When even the one who looks for mind cannot be found, all elaboration ceases by itself. This is not a blank void but a vivid, knowing openness — mind's natural simplicity."
+    },
+    "journalPrompt": "When you looked for the meditator, what did you find? Describe the experience of the searcher dissolving into the search.",
+    "reflectionPrompt": "If neither awareness nor the one who is aware can be found as a solid 'thing,' what is the nature of this present experience?"
+  },
+  {
+    "day": 316,
+    "month": "four-yogas",
+    "season": "integration",
+    "week": 46,
+    "title": "Greater Simplicity: Beyond All Frameworks",
+    "tibetan": "སྤྲོས་བྲལ་ཆེན་པོ",
+    "transliteration": "spros bral chen po",
+    "tradition": "mahamudra",
+    "scope": "great-wisdom",
+    "tags": ["four-yogas", "mahamudra", "awareness", "emptiness", "non-dual"],
+    "conceptId": "simplicity",
+    "teaching": {
+      "source": "Tilopa, Ganges Mahamudra",
+      "text": "At greater simplicity, all conceptual frameworks have been thoroughly seen through. Not only is awareness unfindable, but this very unfindability is not made into a new concept. There is no 'emptiness' to cling to, no 'simplicity' to achieve. The practitioner rests in naked, uncontrived experience without any overlay whatsoever.",
+      "commentary": "Greater simplicity is freedom from the elaboration of freedom itself. Even the idea 'I have realized simplicity' is an elaboration that must dissolve. What remains is utterly simple — just this, as it is, without any conceptual addition or subtraction."
+    },
+    "lenses": {
+      "physics": {
+        "bridge": "The ultimate simplicity of fundamental physical laws beneath apparent complexity",
+        "details": "Physicists seek the simplest possible description of reality — a theory of everything. Greater simplicity is the experiential equivalent: beneath all the apparent complexity of mental life, there is an irreducible simplicity that cannot be further elaborated upon."
+      },
+      "cogsci": {
+        "bridge": "Pre-reflective self-awareness — awareness prior to any conceptual overlay",
+        "details": "Phenomenologists describe a 'pre-reflective' awareness that exists before any conceptual categorization. Greater simplicity is the sustained resting in this pre-reflective dimension — experience as it is before the mind adds labels, categories, and interpretations."
+      },
+      "ai": {
+        "bridge": "Achieving minimum description length — the simplest model that explains the data",
+        "details": "In information theory, the minimum description length principle seeks the simplest model that accounts for the data. Greater simplicity is the mind arriving at its own 'minimum description length' — the simplest possible way of being, with all unnecessary elaboration removed."
+      }
+    },
+    "meditation": {
+      "duration": "45-60 min",
+      "posture": "Seven-point posture, utterly natural, as if not meditating at all",
+      "method": "Do not begin with any technique. Do not set an intention. Simply be. If a thought arises that says 'I should meditate,' notice it and let it pass. If a thought arises that says 'I am resting in simplicity,' notice that and let it pass too. Every concept that arises — including concepts about simplicity, about awareness, about meditation — is just another elaboration. Let each one dissolve without grasping or rejecting. Rest in what remains when nothing is added to experience. This is greater simplicity. Dedicate."
+    },
+    "citation": {
+      "author": "Tilopa",
+      "work": "Ganges Mahamudra",
+      "detail": "Verse on Simplicity",
+      "quote": "Do not think, do not reflect, do not analyze, do not meditate, do not examine. Let the mind rest in its natural state."
+    },
+    "journalPrompt": "Are you able to rest without any conceptual framework at all — not even the framework of 'resting without a framework'? What happens when you try?",
+    "reflectionPrompt": "Tilopa says 'do not meditate.' If you follow this instruction, are you meditating or not? What dissolves in this paradox?"
+  },
+  {
+    "day": 317,
+    "month": "four-yogas",
+    "season": "integration",
+    "week": 46,
+    "title": "Brown on Simplicity: Awareness Has No Real Basis",
+    "tibetan": "གཞི་མེད",
+    "transliteration": "gzhi med",
+    "tradition": "mahamudra",
+    "scope": "great-wisdom",
+    "tags": ["four-yogas", "mahamudra", "awareness", "emptiness"],
+    "conceptId": "simplicity",
+    "teaching": {
+      "source": "Daniel P. Brown, Pointing Out the Great Way, Ch. 12",
+      "text": "Brown translates the key term gzhi med as 'has no real basis.' He explains that in simplicity, the practitioner discovers that awareness-itself has no findable ground, no foundation, no root. It does not arise from anything, it does not abide anywhere, and it does not cease into anything.",
+      "commentary": "This is not nihilism — the discovery that awareness has no basis does not mean awareness does not exist. Rather, it exists in a way that defies all ordinary categories. It is groundless ground, foundationless foundation. Brown emphasizes that this discovery must be experiential, not merely intellectual."
+    },
+    "lenses": {
+      "physics": {
+        "bridge": "The groundlessness of quantum mechanics — no hidden variables beneath the wave function",
+        "details": "Bell's theorem and subsequent experiments show that quantum mechanics has no hidden variables — there is no deeper 'basis' beneath quantum reality. Similarly, awareness has no deeper basis. The search for a foundation for consciousness, like the search for hidden variables, reaches a fundamental groundlessness."
+      },
+      "cogsci": {
+        "bridge": "The binding problem — consciousness has no single neural basis",
+        "details": "Neuroscience cannot locate a single 'seat' of consciousness. The binding problem reveals that conscious experience arises from distributed processing with no central location. Brown's teaching that awareness 'has no real basis' resonates with this scientific recognition."
+      },
+      "ai": {
+        "bridge": "Emergence in complex systems — no single component is the basis of the emergent property",
+        "details": "Intelligence in a neural network has no single basis — it emerges from the interaction of millions of parameters, none of which individually constitutes 'intelligence.' This baselessness of emergent properties mirrors the baselessness of awareness that Brown describes."
+      }
+    },
+    "meditation": {
+      "duration": "30-45 min",
+      "posture": "Comfortable seated posture, spine upright, body deeply relaxed, eyes open",
+      "method": "Following Brown's guidance: establish recognition of awareness-itself. Now investigate its basis. Ask: where does this awareness come from? Look for its origin — can you find a source? Ask: where does it abide? Look for its location — can you find a place where it rests? Ask: where does it go? Look for its destination — can you find where it ends? Discover directly that awareness has no origin, no location, and no destination. It has no real basis. Yet it is vividly present. Rest in this baseless presence. Dedicate."
+    },
+    "citation": {
+      "author": "Daniel P. Brown",
+      "work": "Pointing Out the Great Way",
+      "detail": "Chapter 12: Simplicity and Baselessness",
+      "quote": "Awareness has no real basis. It does not come from anywhere, it does not go anywhere, and it does not abide anywhere. When you search for it, you cannot find it. Yet when you stop searching, it is undeniably here."
+    },
+    "journalPrompt": "What was your experience of searching for the basis of awareness? Did the discovery of groundlessness feel liberating, frightening, or something else entirely?",
+    "reflectionPrompt": "If awareness has no origin and no location, what does this imply about the nature of 'you' who are aware?"
+  },
+  {
+    "day": 318,
+    "month": "four-yogas",
+    "season": "integration",
+    "week": 46,
+    "title": "The Paradox of Unfindable Presence",
+    "tibetan": "མ་རྙེད་ཀྱང་གསལ",
+    "transliteration": "ma rnyed kyang gsal",
+    "tradition": "mahamudra",
+    "scope": "great-wisdom",
+    "tags": ["four-yogas", "mahamudra", "awareness", "emptiness", "non-dual"],
+    "conceptId": "simplicity",
+    "teaching": {
+      "source": "Daniel P. Brown, Pointing Out the Great Way, Ch. 12",
+      "text": "Brown highlights the essential paradox of simplicity: awareness cannot be found, yet it is undeniably present. The practitioner looks for awareness and finds nothing — no location, no size, no substance. And yet, the looking is happening. The finding-nothing is itself a knowing. This paradox is not a problem to be solved but a gateway to be entered.",
+      "commentary": "This paradox dissolves all conceptual frameworks about awareness. You cannot say it exists (because you cannot find it), and you cannot say it does not exist (because something is undeniably knowing right now). Both existence and non-existence are conceptual elaborations that fall away in simplicity."
+    },
+    "lenses": {
+      "physics": {
+        "bridge": "Wave-particle complementarity — light is neither purely wave nor purely particle",
+        "details": "Quantum complementarity shows that light cannot be reduced to either wave or particle — it transcends both categories. Similarly, awareness transcends the categories of existence and non-existence. It is neither a 'thing' you can find nor a 'nothing' that is absent. It is beyond the binary."
+      },
+      "cogsci": {
+        "bridge": "The paradox of introspection — the tool of observation is what is being observed",
+        "details": "Introspection faces a fundamental paradox: the instrument of observation (consciousness) is identical to what is being observed. This paradox, studied in philosophy of mind for centuries, is not theoretical for the simplicity practitioner — it is direct experience."
+      },
+      "ai": {
+        "bridge": "The halting problem — a system cannot fully predict its own behavior",
+        "details": "Turing proved that a general program cannot determine whether an arbitrary program will halt. Awareness encountering its own unfindability resembles this fundamental limit — the system of awareness cannot fully 'compute' itself, yet its functioning is obvious."
+      }
+    },
+    "meditation": {
+      "duration": "30-45 min",
+      "posture": "Seven-point posture, open and relaxed, eyes open with spacious gaze",
+      "method": "Rest as awareness. Now notice: you cannot find awareness as a thing — it has no location, form, or boundary. Sit with this. Now notice: you cannot deny awareness — something is knowing this very moment. Sit with this. Hold both simultaneously — unfindable and undeniable. Do not resolve the paradox by choosing one side. Let the paradox itself be the resting place. Notice that when you stop trying to resolve it, a profound openness emerges. Rest there. This is the gate of simplicity. Dedicate."
+    },
+    "citation": {
+      "author": "Daniel P. Brown",
+      "work": "Pointing Out the Great Way",
+      "detail": "Chapter 12: The Paradox of Simplicity",
+      "quote": "You look for awareness and find nothing. Yet the looking itself is awareness. This is not a contradiction to be resolved but a doorway to be entered. Step through it."
+    },
+    "journalPrompt": "Describe in your own words the paradox of unfindable presence. How does it feel to hold both the unfindability and the undeniability at once?",
+    "reflectionPrompt": "Does the inability to find awareness mean you have failed in the search, or succeeded beyond all expectations?"
+  },
+  {
+    "day": 319,
+    "month": "four-yogas",
+    "season": "integration",
+    "week": 46,
+    "title": "Dissolving Conceptual Frameworks",
+    "tibetan": "སྤྲོས་པ་ཀུན་ཞི",
+    "transliteration": "spros pa kun zhi",
+    "tradition": "mahamudra",
+    "scope": "great-wisdom",
+    "tags": ["four-yogas", "mahamudra", "awareness", "emptiness", "non-dual"],
+    "conceptId": "simplicity",
+    "teaching": {
+      "source": "Daniel P. Brown, Pointing Out the Great Way, Ch. 12",
+      "text": "Brown explains that in simplicity, all mental constructs about meditation, path, and attainment drop away. The concepts 'meditator,' 'meditation,' 'progress,' 'realization,' 'awareness,' and even 'simplicity' are all elaborations. When the practitioner sees through these constructs, what remains is utterly simple — just this.",
+      "commentary": "This teaching is deeply challenging because it undermines the very framework the practitioner has been using to navigate the path. Even the map of the four yogas is a conceptual elaboration. Simplicity is the willingness to release the map and be where you actually are."
+    },
+    "lenses": {
+      "physics": {
+        "bridge": "The map is not the territory — models of reality are not reality itself",
+        "details": "Physics uses mathematical models to describe reality, but the equations are not the phenomena themselves. In simplicity, the practitioner recognizes that all models of awareness — including the four yogas framework — are maps, not territory. The territory is what remains when all maps are set aside."
+      },
+      "cogsci": {
+        "bridge": "Deconstructing cognitive schemas and returning to direct experience",
+        "details": "Cognitive science shows that we perceive the world through learned schemas. Simplicity deconstructs all spiritual schemas — the schema of 'practitioner,' 'path,' 'progress,' 'enlightenment.' What remains is experience prior to schematic interpretation."
+      },
+      "ai": {
+        "bridge": "Removing all learned biases from a model to see what inherent structure remains",
+        "details": "If you could remove all the trained weights from a neural network, what would remain? The bare architecture. Simplicity is analogous — removing all learned conceptual frameworks to discover what is present prior to any conceptual training."
+      }
+    },
+    "meditation": {
+      "duration": "30-45 min",
+      "posture": "Seven-point posture, completely natural, no sense of doing anything special",
+      "method": "Sit and notice all the concepts you bring to this moment: 'I am meditating,' 'I am a practitioner,' 'I am doing the yoga of simplicity,' 'I should recognize awareness.' One by one, let each concept dissolve. Not by pushing them away, but by seeing that they are just thoughts — appearances in awareness that have no more reality than clouds in the sky. When all concepts have been released, notice what remains. It is not nothing. It is not something. It is beyond all frameworks. Simply be that. When a concept returns, notice and release again. Dedicate."
+    },
+    "citation": {
+      "author": "Daniel P. Brown",
+      "work": "Pointing Out the Great Way",
+      "detail": "Chapter 12: Dissolving Constructs",
+      "quote": "All the concepts you have about meditation, about awareness, about the path, about yourself as a practitioner — every single one of these is an elaboration. In simplicity, all elaboration ceases. What remains is beyond what any concept can capture."
+    },
+    "journalPrompt": "What concepts about your spiritual path do you hold most dearly? What would it feel like to let them all go, even the concept of 'letting go'?",
+    "reflectionPrompt": "If the map of the four yogas is itself a conceptual elaboration, what happens to the map when simplicity is realized?"
+  },
+  {
+    "day": 320,
+    "month": "four-yogas",
+    "season": "integration",
+    "week": 46,
+    "title": "Simplicity as Radical Not-Knowing",
+    "tibetan": "མི་ཤེས་པའི་ཡེ་ཤེས",
+    "transliteration": "mi shes pa'i ye shes",
+    "tradition": "mahamudra",
+    "scope": "great-wisdom",
+    "tags": ["four-yogas", "mahamudra", "awareness", "emptiness"],
+    "conceptId": "simplicity",
+    "teaching": {
+      "source": "Daniel P. Brown, Pointing Out the Great Way, Ch. 12",
+      "text": "Brown describes simplicity as a form of radical not-knowing that is itself a form of primordial wisdom. The practitioner no longer 'knows' what awareness is — all definitions have fallen away. Yet this not-knowing is not ignorance. It is the wisest possible relationship to something that cannot be captured in concepts.",
+      "commentary": "Ordinary not-knowing is lack of information. Simplicity's not-knowing is the exhaustion of conceptual grasping in the face of something that exceeds all concepts. It is like standing before the Grand Canyon and having all words fail — the silence is not ignorance but the deepest appreciation."
+    },
+    "lenses": {
+      "physics": {
+        "bridge": "Heisenberg's uncertainty principle — certain knowledge has fundamental limits",
+        "details": "The uncertainty principle shows that complete knowledge of a quantum system is fundamentally impossible. Simplicity reveals an analogous truth about awareness — it cannot be fully 'known' as an object. The not-knowing is not a limitation to overcome but a feature of reality's deepest nature."
+      },
+      "cogsci": {
+        "bridge": "Apophatic cognition — knowing through negation rather than assertion",
+        "details": "Research on apophatic (negative) cognition shows that some realities are better approached through what they are not rather than what they are. Simplicity is pure apophatic cognition — awareness is known precisely by the failure of all positive descriptions."
+      },
+      "ai": {
+        "bridge": "The limits of model interpretability — some patterns defy explicit description",
+        "details": "Deep learning models learn representations that resist human interpretation. The model 'knows' something it cannot explain. Simplicity is the practitioner arriving at a similar place — a direct knowing that cannot be translated into conceptual terms."
+      }
+    },
+    "meditation": {
+      "duration": "30-45 min",
+      "posture": "Seated naturally, completely at ease, eyes open softly",
+      "method": "Rest as awareness without any attempt to know what awareness is. Release all definitions, descriptions, and frameworks. When the mind offers a concept — 'awareness is empty,' 'awareness is luminous,' 'awareness is present' — thank it and let the concept dissolve. Practice resting in complete not-knowing. Notice that this not-knowing is not uncomfortable — it is actually deeply restful. You do not need to know what this is. You are it. That is enough. Rest in the sufficiency of being without knowing. Dedicate the merit."
+    },
+    "citation": {
+      "author": "Daniel P. Brown",
+      "work": "Pointing Out the Great Way",
+      "detail": "Chapter 12: Wisdom of Not-Knowing",
+      "quote": "When every concept about awareness has been exhausted and you rest in complete not-knowing — that not-knowing is itself the wisdom of simplicity. It is not ignorance. It is the most intimate possible relationship with what is beyond all concepts."
+    },
+    "journalPrompt": "What is it like to rest in not-knowing? Does the mind resist? Does it feel liberating? Describe the quality of this not-knowing.",
+    "reflectionPrompt": "Is there a kind of knowing that is deeper than conceptual understanding? What would such knowing feel like?"
+  },
+  {
+    "day": 321,
+    "month": "four-yogas",
+    "season": "integration",
+    "week": 46,
+    "title": "Entering the Third Yoga: One-Taste",
+    "tibetan": "རོ་གཅིག",
+    "transliteration": "ro gcig",
+    "tradition": "mahamudra",
+    "scope": "great-wisdom",
+    "tags": ["four-yogas", "mahamudra", "awareness", "non-dual"],
+    "conceptId": "oneTaste",
+    "teaching": {
+      "source": "Wangchuk Dorje, Mahamudra: Ocean of Definitive Meaning, Ch. 10",
+      "text": "In the third yoga, all experience is recognized as having a single flavor — the flavor of awareness. Samsara and nirvana, pleasure and pain, self and other, meditation and distraction — all taste the same because all are equally expressions of awareness. There is nothing outside awareness, so nothing has a different taste.",
+      "commentary": "One-taste does not mean all experiences feel the same. Pain still hurts, joy still delights. But the practitioner recognizes that the substance of all experiences is awareness-itself. Like gold fashioned into different ornaments — a ring, a bracelet, a crown — the forms differ but the gold is one."
+    },
+    "lenses": {
+      "physics": {
+        "bridge": "The unified field from which all forces and particles emerge",
+        "details": "Physics seeks a unified field theory where all forces emerge from a single source. One-taste is the experiential discovery of this unity — all experiences, however different they appear, are expressions of one 'field' of awareness. The diversity of appearance does not negate the unity of substance."
+      },
+      "cogsci": {
+        "bridge": "The common neural substrate underlying all conscious experiences",
+        "details": "Neuroscience increasingly recognizes that all conscious experiences, however different in content, share common neural correlates of consciousness. One-taste is the first-person recognition of what science approaches from the third person — that all experiences share a common 'substance.'"
+      },
+      "ai": {
+        "bridge": "Transfer learning — a single learned representation serving multiple domains",
+        "details": "In transfer learning, a representation learned in one domain applies to many others — the underlying pattern is universal. One-taste discovers that awareness is the ultimate 'transfer representation,' the single learned feature that applies to every domain of experience."
+      }
+    },
+    "meditation": {
+      "duration": "30-45 min",
+      "posture": "Seven-point posture, open and relaxed, eyes open with wide gaze",
+      "method": "Rest as awareness. Now notice a pleasant sensation — perhaps the warmth of the body. What is its substance? It is an experience appearing in awareness. Now notice an unpleasant sensation — perhaps tension in the shoulders. What is its substance? Also an experience appearing in awareness. Now notice a thought. Its substance? Also awareness. Notice a sound. Also awareness. Everything you can possibly experience — pleasant, unpleasant, neutral, internal, external — has the same taste: it is awareness appearing to itself. Rest in this recognition of one-taste. Dedicate."
+    },
+    "citation": {
+      "author": "Wangchuk Dorje (9th Karmapa)",
+      "work": "Mahamudra: Ocean of Definitive Meaning",
+      "detail": "Chapter 10: The Yoga of One-Taste",
+      "quote": "Samsara and nirvana have one taste. All phenomena, without exception, have the single taste of awareness. Just as the ocean has one taste — the taste of salt — so all experience has one taste — the taste of awareness."
+    },
+    "journalPrompt": "Today, taste different experiences — a moment of pleasure, a moment of discomfort, a moment of boredom. Can you find the same awareness in each? What is the 'one taste'?",
+    "reflectionPrompt": "If pleasure and pain have the same taste of awareness, does this change your relationship to suffering?"
+  },
+  {
+    "day": 322,
+    "month": "four-yogas",
+    "season": "integration",
+    "week": 47,
+    "title": "One-Taste: Dissolving the Boundary of Self and Other",
+    "tibetan": "བདག་གཞན་རོ་གཅིག",
+    "transliteration": "bdag gzhan ro gcig",
+    "tradition": "mahamudra",
+    "scope": "great-wisdom",
+    "tags": ["four-yogas", "mahamudra", "awareness", "non-dual"],
+    "conceptId": "oneTaste",
+    "teaching": {
+      "source": "Dakpo Tashi Namgyal, Mahamudra: The Moonlight, Part III",
+      "text": "In one-taste, the boundary between self and other dissolves. The awareness 'in here' and the experience 'out there' are recognized as having the same nature. There is no inside or outside to awareness — what appears as the external world and what appears as the internal world are both expressions of the same awareness.",
+      "commentary": "This is not a philosophical position but a direct experience. The practitioner does not merely think 'self and other are one' — they directly perceive that the seeming boundary between subject and object has no real existence. It is a conceptual overlay that dissolves in one-taste."
+    },
+    "lenses": {
+      "physics": {
+        "bridge": "Quantum entanglement — non-local correlations that transcend spatial separation",
+        "details": "Entangled particles show correlations that cannot be explained by local, separate entities. One-taste reveals a similar non-locality in consciousness — the apparent separation between 'my awareness' and 'the world' is as illusory as the apparent separateness of entangled particles."
+      },
+      "cogsci": {
+        "bridge": "Predictive processing — the brain constructs both 'self' and 'world' from the same neural activity",
+        "details": "Predictive processing theory shows that the brain generates models of both self and world using the same computational principles. The boundary between self and world is a constructed interface, not a discovery of objective reality. One-taste recognizes this directly."
+      },
+      "ai": {
+        "bridge": "The input-output boundary of a system is an abstraction, not an inherent division",
+        "details": "In systems theory, the boundary between a system and its environment is drawn by an observer — it is not inherent. One-taste recognizes that the boundary between 'self' and 'other' is similarly observer-dependent and ultimately without inherent reality."
+      }
+    },
+    "meditation": {
+      "duration": "30-45 min",
+      "posture": "Seven-point posture, eyes open with panoramic awareness, soft unfocused gaze",
+      "method": "Rest as awareness. Now notice the sense of being 'in here' — a self looking out at a world. Examine: where exactly is the boundary between in here and out there? Is it at the skin? At the sense organs? Look carefully for the dividing line. Notice that sounds arise in awareness, thoughts arise in awareness, sensations arise in awareness, sights arise in awareness — are any of these truly 'outside'? See that self and other both appear within the same awareness. The boundary dissolves — not into confusion, but into a clear recognition of one taste. Dedicate."
+    },
+    "citation": {
+      "author": "Dakpo Tashi Namgyal",
+      "work": "Mahamudra: The Moonlight",
+      "detail": "Part III: One-Taste",
+      "quote": "When inside and outside merge in one taste, when self and other are recognized as a single expanse of awareness, the practitioner has entered the yoga of one-taste."
+    },
+    "journalPrompt": "Where do you experience the boundary between self and other? When you look for it carefully, what do you find? Is it as solid as it seems?",
+    "reflectionPrompt": "If the boundary between self and world is a construction of mind, what are you when the boundary dissolves?"
+  },
+  {
+    "day": 323,
+    "month": "four-yogas",
+    "season": "integration",
+    "week": 47,
+    "title": "One-Taste: Sacred and Profane United",
+    "tibetan": "དམ་པ་དང་ཐ་མལ་རོ་གཅིག",
+    "transliteration": "dam pa dang tha mal ro gcig",
+    "tradition": "mahamudra",
+    "scope": "great-wisdom",
+    "tags": ["four-yogas", "mahamudra", "awareness", "non-dual", "integration"],
+    "conceptId": "oneTaste",
+    "teaching": {
+      "source": "Tilopa, Ganges Mahamudra",
+      "text": "In one-taste, the distinction between meditation and daily life, between sacred and profane, between spiritual practice and ordinary activity dissolves. Washing dishes has the same taste as sitting in meditation. The marketplace has the same taste as the meditation cave. Nothing is excluded from the mandala of awareness.",
+      "commentary": "This teaching is profoundly liberating. The practitioner no longer needs to seek special conditions for practice. Every moment, every situation, every activity is equally an expression of awareness. There is nowhere to go and nothing to reject — all of life is the practice."
+    },
+    "lenses": {
+      "physics": {
+        "bridge": "Symmetry principles — the same laws apply in all locations and at all times",
+        "details": "The symmetry principles of physics ensure that the laws of nature are the same everywhere and at every time. One-taste discovers a similar symmetry in awareness — the 'laws' of awareness apply equally in every situation, making no distinction between sacred and ordinary."
+      },
+      "cogsci": {
+        "bridge": "Dissolving context-dependent processing into context-free recognition",
+        "details": "The brain normally processes experiences differently depending on context — a meditation retreat versus a busy office. One-taste represents a shift to a context-independent mode of recognition, where the fundamental nature of experience is perceived regardless of external circumstances."
+      },
+      "ai": {
+        "bridge": "Domain-invariant features that remain constant across all input distributions",
+        "details": "The most powerful learned features are domain-invariant — they hold across all conditions. One-taste recognizes awareness as the ultimate domain-invariant feature, present and unchanged whether the 'input domain' is a temple or a traffic jam."
+      }
+    },
+    "meditation": {
+      "duration": "All day (formal session 20-30 min, then continuous practice)",
+      "posture": "Any posture, any activity — seated for formal session, then all activities",
+      "method": "Begin with a short formal session, resting in awareness. Now carry this into your day. As you do ordinary activities — cooking, cleaning, commuting — notice: does the taste of awareness change? Is awareness different when you are 'meditating' versus when you are checking email? Deliberately bring awareness to your most mundane activity and your most sacred one. Find the same taste. Let the categories of 'spiritual' and 'ordinary' dissolve. All of it is awareness tasting itself through different forms. Dedicate the entire day."
+    },
+    "citation": {
+      "author": "Tilopa",
+      "work": "Ganges Mahamudra",
+      "detail": "Verses on One-Taste",
+      "quote": "In the marketplace, in the charnel ground, in the temple, in the home — wherever you are, awareness has the same taste. Samsara and nirvana are not two. When this is realized, that is one-taste."
+    },
+    "journalPrompt": "Choose your most mundane activity and your most meaningful one. Practice awareness during both. Can you find the same taste in each? What dissolves when you do?",
+    "reflectionPrompt": "If there is no difference between sacred and profane, between practice and non-practice, what happens to the entire project of spiritual seeking?"
+  },
+  {
+    "day": 324,
+    "month": "four-yogas",
+    "season": "integration",
+    "week": 47,
+    "title": "Brown on One-Taste: Everything as Awareness",
+    "tibetan": "ཐམས་ཅད་རིག་པ",
+    "transliteration": "thams cad rig pa",
+    "tradition": "mahamudra",
+    "scope": "great-wisdom",
+    "tags": ["four-yogas", "mahamudra", "awareness", "non-dual"],
+    "conceptId": "oneTaste",
+    "teaching": {
+      "source": "Daniel P. Brown, Pointing Out the Great Way, Ch. 12",
+      "text": "Brown explains one-taste as the recognition that everything that appears — every thought, every emotion, every perception, every sensation — is an expression of awareness. Just as waves are expressions of the ocean, all experiences are expressions of awareness. Nothing stands outside awareness, and so nothing has a different taste.",
+      "commentary": "Brown emphasizes that this is not a belief to adopt but a direct perception. The practitioner does not think 'everything is awareness' — they see it directly. The ocean does not need to believe it is water. Once recognized, the one-taste of all experience is self-evident."
+    },
+    "lenses": {
+      "physics": {
+        "bridge": "Mass-energy equivalence — all matter is a form of energy",
+        "details": "Einstein's E=mc² reveals that matter and energy are different forms of the same thing. One-taste is the experiential analogue — all experiences, however different they appear, are different forms of the same awareness. The diversity of experience does not negate the unity of its nature."
+      },
+      "cogsci": {
+        "bridge": "The common currency hypothesis — all sensory modalities converted to a single neural code",
+        "details": "Some neuroscientists propose that all sensory information is ultimately converted to a common neural currency. One-taste is the experiential discovery of this common currency — the 'awareness-quality' that is present in every modality of experience."
+      },
+      "ai": {
+        "bridge": "A universal embedding space where all data types share a common representation",
+        "details": "Modern AI architectures create unified embedding spaces where text, images, and audio share a common representation. One-taste discovers that all experiences share a common 'embedding' in awareness — different modalities, same underlying space."
+      }
+    },
+    "meditation": {
+      "duration": "30-45 min",
+      "posture": "Seven-point posture, relaxed and open, eyes open with inclusive gaze",
+      "method": "Following Brown's instructions: rest as awareness. Now notice what is appearing — sounds, sensations, thoughts, visual impressions. Do not focus on any single appearance. Instead, notice the common quality they all share: they are all experiences arising in awareness. Like tasting different foods and noticing they all share the quality of being 'food,' taste different experiences and notice they all share the quality of being 'awareness.' Rest in this one-taste — not by making everything the same, but by recognizing the same awareness in everything. Dedicate."
+    },
+    "citation": {
+      "author": "Daniel P. Brown",
+      "work": "Pointing Out the Great Way",
+      "detail": "Chapter 12: One-Taste",
+      "quote": "Everything that appears is an expression of awareness. Samsara and nirvana, joy and suffering, self and other — all are the play of awareness. When this is directly perceived, not just thought about, that is one-taste."
+    },
+    "journalPrompt": "Brown says one-taste is not a belief but a direct perception. When you look at your experience right now, can you see the one-taste directly? What helps or hinders this seeing?",
+    "reflectionPrompt": "If every experience is an expression of awareness, is there anything that could possibly go wrong?"
+  },
+  {
+    "day": 325,
+    "month": "four-yogas",
+    "season": "integration",
+    "week": 47,
+    "title": "One-Taste: Nothing to Accept or Reject",
+    "tibetan": "བླང་དོར་མེད་པ",
+    "transliteration": "blang dor med pa",
+    "tradition": "mahamudra",
+    "scope": "great-wisdom",
+    "tags": ["four-yogas", "mahamudra", "awareness", "non-dual"],
+    "conceptId": "oneTaste",
+    "teaching": {
+      "source": "Daniel P. Brown, Pointing Out the Great Way, Ch. 12",
+      "text": "Brown teaches that in one-taste, the fundamental orientation of accepting and rejecting dissolves. Since all experience has the same taste of awareness, there is nothing that needs to be cultivated and nothing that needs to be eliminated. The practitioner no longer sorts experience into 'good meditation' and 'bad meditation,' 'spiritual' and 'unspiritual.'",
+      "commentary": "This is the end of spiritual materialism — the tendency to use spiritual practice to enhance the ego by collecting 'good' experiences and avoiding 'bad' ones. In one-taste, even the most difficult emotions and the most disturbing thoughts are recognized as awareness, no different in nature from the most sublime meditative states."
+    },
+    "lenses": {
+      "physics": {
+        "bridge": "Entropy and the second law — nature does not prefer any particular arrangement over another at the fundamental level",
+        "details": "From the perspective of fundamental physics, no arrangement of particles is inherently better or worse than another — value judgments are human additions. One-taste recognizes something similar: from the perspective of awareness, no experience is inherently better or worse. All are equally awareness."
+      },
+      "cogsci": {
+        "bridge": "Moving beyond approach-avoidance motivation to equanimous presence",
+        "details": "The brain's fundamental motivational system operates on approach (toward pleasant) and avoidance (away from unpleasant). One-taste represents a transcendence of this binary — not by suppressing motivation but by recognizing that all experiences, approached or avoided, share the same fundamental nature."
+      },
+      "ai": {
+        "bridge": "Removing the reward function — the system operates without preference",
+        "details": "Reinforcement learning agents act based on reward functions that define what is good or bad. One-taste is like removing the reward function entirely — the system continues to function, but without preferencing certain states over others. All states are equally valid expressions of the system."
+      }
+    },
+    "meditation": {
+      "duration": "30-45 min",
+      "posture": "Seven-point posture, effortless, body and mind at complete ease",
+      "method": "Rest as awareness. Now let whatever arises, arise. If a pleasant feeling comes, do not grasp at it — notice its taste of awareness. If an unpleasant memory surfaces, do not push it away — notice its taste of awareness. If boredom arises, notice its taste. If bliss arises, notice its taste. The taste is always the same. Practice letting go of all preference — not as a discipline, but as a natural consequence of seeing one-taste. There is nothing to accept and nothing to reject. Rest in this freedom. Dedicate."
+    },
+    "citation": {
+      "author": "Daniel P. Brown",
+      "work": "Pointing Out the Great Way",
+      "detail": "Chapter 12: Beyond Accepting and Rejecting",
+      "quote": "When the practitioner recognizes one-taste, the impulse to accept some experiences and reject others simply falls away. Nothing needs to be accepted because nothing is outside awareness. Nothing needs to be rejected because everything is awareness. This is genuine freedom."
+    },
+    "journalPrompt": "Notice your habitual patterns of accepting and rejecting experiences. What would change if you recognized that all experiences have the same taste?",
+    "reflectionPrompt": "Is there any experience you believe stands outside of awareness — any experience that does not have the taste of awareness?"
+  },
+  {
+    "day": 326,
+    "month": "four-yogas",
+    "season": "integration",
+    "week": 47,
+    "title": "The Gold and the Ornaments: Metaphor of One-Taste",
+    "tibetan": "གསེར་དང་རྒྱན་ཆ",
+    "transliteration": "gser dang rgyan cha",
+    "tradition": "mahamudra",
+    "scope": "great-wisdom",
+    "tags": ["four-yogas", "mahamudra", "awareness", "non-dual"],
+    "conceptId": "oneTaste",
+    "teaching": {
+      "source": "Gampopa, Jewel Ornament of Liberation, Ch. 20",
+      "text": "The classic metaphor for one-taste is gold fashioned into different ornaments. A ring, a bracelet, a necklace — the forms are different, but the gold is one. Similarly, thoughts, emotions, perceptions, and sensations are different 'ornaments' but the awareness from which they are fashioned is one. The ornaments never stop being gold.",
+      "commentary": "This metaphor is precise. The ornaments are real as appearances — a ring is genuinely different from a bracelet. But their substance is identical. Similarly, pleasure is genuinely different from pain as an experience, but their substance — awareness — is one. One-taste does not deny diversity; it recognizes unity within diversity."
+    },
+    "lenses": {
+      "physics": {
+        "bridge": "The standard model — diverse particles as excitations of underlying quantum fields",
+        "details": "In quantum field theory, electrons, quarks, and photons are different excitations of underlying fields — different 'ornaments' made from the same 'gold' of quantum fields. One-taste perceives all experiences as different excitations of the single 'field' of awareness."
+      },
+      "cogsci": {
+        "bridge": "The common factor analysis of conscious experience",
+        "details": "Factor analysis in psychology seeks common factors underlying diverse observed variables. One-taste is the discovery of the ultimate common factor — awareness — that underlies all diverse experiences. No matter how many factors you extract, awareness is present in every one."
+      },
+      "ai": {
+        "bridge": "A single latent space generating all possible outputs through different decodings",
+        "details": "A variational autoencoder maps all data to a single latent space, from which different outputs are generated. One-taste recognizes awareness as the 'latent space' from which all experiences are 'decoded' — the same underlying representation yielding infinitely diverse appearances."
+      }
+    },
+    "meditation": {
+      "duration": "30-45 min",
+      "posture": "Seven-point posture, relaxed, eyes open, gentle smile",
+      "method": "Rest as awareness. Contemplate the metaphor of gold and ornaments. Now look at your current experience: there are sounds (an ornament), there are body sensations (another ornament), there are thoughts (another ornament), there is visual experience (another ornament). All different in form. Now look at what they are made of — each one is an experience, a knowing, an appearance in awareness. See the gold in every ornament. Do not try to melt the ornaments down; let them keep their forms while recognizing the gold. This is one-taste in action. Dedicate."
+    },
+    "citation": {
+      "author": "Gampopa",
+      "work": "Jewel Ornament of Liberation",
+      "detail": "Chapter 20: The Metaphor of Gold",
+      "quote": "Just as various ornaments made of gold are all gold, so the various appearances of samsara and nirvana are all the display of awareness. Recognizing this, the yogin sees one-taste in everything."
+    },
+    "journalPrompt": "Use the gold and ornaments metaphor in your daily experience today. What are the ornaments you encounter? Can you see the gold in each one?",
+    "reflectionPrompt": "If all experiences are gold fashioned into different ornaments, is any ornament more 'golden' than another? What does this mean for your preferences?"
+  },
+  {
+    "day": 327,
+    "month": "four-yogas",
+    "season": "integration",
+    "week": 47,
+    "title": "Entering the Fourth Yoga: Non-Meditation",
+    "tibetan": "སྒོམ་མེད",
+    "transliteration": "sgom med",
+    "tradition": "mahamudra",
+    "scope": "great-wisdom",
+    "tags": ["four-yogas", "mahamudra", "awareness", "non-dual"],
+    "conceptId": "nonMeditation",
+    "teaching": {
+      "source": "Tilopa, Ganges Mahamudra",
+      "text": "The fourth and final yoga is non-meditation. Here, there is nothing left to meditate on and no one left to meditate. The distinction between meditator and meditation has dissolved. There is no 'practice' because awareness is always already the case — it was never absent, so there is nothing to cultivate.",
+      "commentary": "Non-meditation is the culmination of the Mahamudra path. It is not the absence of meditation but the transcendence of the entire framework of 'meditating.' As Tilopa proclaimed: 'Do not meditate — do not meditate — do not meditate on anything.' This is the ultimate instruction."
+    },
+    "lenses": {
+      "physics": {
+        "bridge": "A system in perfect equilibrium that requires no external input to maintain its state",
+        "details": "A system in perfect equilibrium maintains itself without any external intervention. Non-meditation is the cognitive equivalent — awareness maintains itself without any effort of 'meditation.' The system is self-sustaining, self-recognizing, and requires no input from a 'meditator.'"
+      },
+      "cogsci": {
+        "bridge": "Effortless performance — the state beyond deliberate practice",
+        "details": "In expertise research, the highest level of performance is effortless — the expert no longer 'tries.' Non-meditation represents this in the domain of awareness: the practitioner has so thoroughly integrated recognition that there is no longer any sense of trying to be aware. Awareness simply IS."
+      },
+      "ai": {
+        "bridge": "A fully trained model that operates without further optimization",
+        "details": "Once fully trained, a model operates without any gradient updates — it simply functions. Non-meditation is like a fully trained model: the 'training' is complete, and awareness simply operates without any ongoing effort of optimization or practice."
+      }
+    },
+    "meditation": {
+      "duration": "No fixed duration — timeless",
+      "posture": "Any posture, any situation — the distinction between meditation posture and ordinary posture has dissolved",
+      "method": "There is no method. This is the instruction. Do not sit down to meditate. Do not try to be aware. Do not try not to try. Simply be as you already are. Notice that awareness is already present without any effort on your part. It was present before you 'started' meditating and it will be present after you 'stop.' The entire framework of starting and stopping practice dissolves. If you find yourself 'meditating,' notice that this is just another thought and let it pass. Rest as the natural state that needs no maintenance. Dedicate the merit — or notice that even dedication is an elaboration."
+    },
+    "citation": {
+      "author": "Tilopa",
+      "work": "Ganges Mahamudra",
+      "detail": "The Ultimate Instruction",
+      "quote": "Do not meditate — do not meditate — do not meditate on anything. Nothing whatsoever is to be meditated upon. Remain in the natural state — unfabricated, fresh, and vivid."
+    },
+    "journalPrompt": "What happens when you follow Tilopa's instruction: 'Do not meditate'? Does the mind rebel? Does something surprising emerge?",
+    "reflectionPrompt": "If awareness has always been present and was never absent, what exactly have you been 'practicing' all this time?"
+  },
+  {
+    "day": 328,
+    "month": "four-yogas",
+    "season": "integration",
+    "week": 47,
+    "title": "Non-Meditation: The Dissolution of the Meditator",
+    "tibetan": "སྒོམ་མཁན་ཞིག་པ",
+    "transliteration": "sgom mkhan zhig pa",
+    "tradition": "mahamudra",
+    "scope": "great-wisdom",
+    "tags": ["four-yogas", "mahamudra", "awareness", "non-dual"],
+    "conceptId": "nonMeditation",
+    "teaching": {
+      "source": "Wangchuk Dorje, Mahamudra: Ocean of Definitive Meaning, Ch. 11",
+      "text": "In non-meditation, the sense of a separate 'meditator' who 'practices' falls away completely. In one-pointedness, there was a meditator stabilizing recognition. In simplicity, the meditator investigated awareness. In one-taste, the meditator recognized unity. Now, the meditator itself dissolves — there is just awareness, with no one standing outside it to practice.",
+      "commentary": "This is the final dissolution of the subject-object framework. Throughout the four yogas, the sense of being a separate self who meditates has been gradually thinning. In non-meditation, this last vestige of duality — the meditator — dissolves completely into awareness."
+    },
+    "lenses": {
+      "physics": {
+        "bridge": "The observer dissolving into the observed in quantum measurement",
+        "details": "In some interpretations of quantum mechanics, the distinction between observer and observed is ultimately untenable. Non-meditation is the experiential dissolution of this distinction — the 'observer' (meditator) is recognized as made of the same 'stuff' as the 'observed' (awareness)."
+      },
+      "cogsci": {
+        "bridge": "The dissolution of the self-referential processing network",
+        "details": "The brain's self-referential processing — the sense of being a separate self — can diminish dramatically in advanced meditation states. Non-meditation represents the most complete form of this dissolution, where the neural activity constructing a 'meditator' as separate from 'meditation' ceases."
+      },
+      "ai": {
+        "bridge": "Removing the distinction between the training algorithm and the model",
+        "details": "In standard machine learning, the training algorithm is separate from the model. Non-meditation is like the training algorithm realizing it IS the model — there is no separate process optimizing the system. The system is self-complete."
+      }
+    },
+    "meditation": {
+      "duration": "No fixed duration",
+      "posture": "Natural — whatever the body is already doing",
+      "method": "Notice: who is about to meditate? Look for the meditator. In one-pointedness, you found that awareness was stable. In simplicity, you found that awareness was unfindable. In one-taste, you found that all experience was awareness. Now find the one who found all of this. Where is the meditator? Discover that the meditator is itself an appearance in awareness — another ornament made of gold. When the meditator dissolves, what remains? Not nothing. Not someone meditating. Just this — awareness, timelessly present, neither meditating nor not meditating. Dedicate — or not."
+    },
+    "citation": {
+      "author": "Wangchuk Dorje (9th Karmapa)",
+      "work": "Mahamudra: Ocean of Definitive Meaning",
+      "detail": "Chapter 11: Non-Meditation",
+      "quote": "When there is no meditator and nothing meditated upon, when the distinction between meditation and non-meditation has dissolved, when there is nothing to do and no one to do it — this is the yoga of non-meditation. It is not a state to be achieved but the natural condition recognized."
+    },
+    "journalPrompt": "Can you find the 'meditator' as a solid, separate entity? When you look for the one who practices, what do you discover?",
+    "reflectionPrompt": "If the meditator dissolves, who is left to notice the dissolution? And who is asking this question?"
+  },
+  {
+    "day": 329,
+    "month": "four-yogas",
+    "season": "integration",
+    "week": 48,
+    "title": "Non-Meditation: Always Already the Case",
+    "tibetan": "ཡེ་ནས་གྲུབ་པ",
+    "transliteration": "ye nas grub pa",
+    "tradition": "mahamudra",
+    "scope": "great-wisdom",
+    "tags": ["four-yogas", "mahamudra", "awareness", "non-dual"],
+    "conceptId": "nonMeditation",
+    "teaching": {
+      "source": "Dakpo Tashi Namgyal, Mahamudra: The Moonlight, Part III",
+      "text": "Non-meditation reveals that awareness has always already been the case. It was never absent, even before the practitioner began the path. The four yogas did not create awareness — they progressively removed the obscurations that prevented recognition of what was always present. Non-meditation is the recognition that there was never anything to achieve.",
+      "commentary": "This is the great irony of the path: after years of dedicated practice, the practitioner discovers that what they sought was present all along, never for a moment absent. The journey was not from ignorance to awareness but from non-recognition to recognition of what was always already so."
+    },
+    "lenses": {
+      "physics": {
+        "bridge": "The conservation of energy — energy is never created or destroyed, only transformed and recognized",
+        "details": "Energy cannot be created or destroyed. Awareness, like energy, was never created by meditation and cannot be destroyed by distraction. Non-meditation recognizes the 'conservation law' of awareness — it has always been the case, is always the case, and will always be the case."
+      },
+      "cogsci": {
+        "bridge": "Background consciousness that persists even when not the focus of attention",
+        "details": "Consciousness research suggests that a background awareness persists even when not focal. Non-meditation recognizes this background awareness as the primary reality — it was there before any meditation practice began and does not depend on practice to continue."
+      },
+      "ai": {
+        "bridge": "The hardware that was always running beneath the software — the substrate precedes all programs",
+        "details": "A computer's hardware operates before any software is loaded. Awareness is the 'hardware' that was running before any 'software' of meditation was installed. Non-meditation recognizes that the substrate of awareness was always already functioning — no program needs to be running for the hardware to exist."
+      }
+    },
+    "meditation": {
+      "duration": "Timeless — has no beginning and no end",
+      "posture": "Whatever posture you are in right now — it is already the perfect posture",
+      "method": "Do not prepare to meditate. Do not take a special posture. Do not set a timer. Simply notice: awareness is already here. It was here before you read this instruction. It was here when you woke up this morning. It was here in your dreams last night. It has always been here. The entire path of the four yogas was the recognition of what was always already the case. Rest in this recognition. There is nothing more to do. There never was. This is non-meditation — not a special state you enter but the natural condition you have never left."
+    },
+    "citation": {
+      "author": "Dakpo Tashi Namgyal",
+      "work": "Mahamudra: The Moonlight",
+      "detail": "Part III: Non-Meditation",
+      "quote": "Non-meditation is not a new attainment. It is the recognition that awareness was always present, from beginningless time. The four yogas did not create awareness but only removed the layers of non-recognition. Now there is nothing left to remove and nothing left to add."
+    },
+    "journalPrompt": "Reflect on your entire path of practice. Was there ever a moment when awareness was truly absent? What does this recognition mean for how you understand your journey?",
+    "reflectionPrompt": "If awareness was always already the case, what exactly changed through practice? And if nothing fundamentally changed, what is the value of the path?"
+  },
+  {
+    "day": 330,
+    "month": "four-yogas",
+    "season": "integration",
+    "week": 48,
+    "title": "Brown on Non-Meditation: Dissolving into Awareness",
+    "tibetan": "རིག་པའི་ངང་དུ་ཞུ་བ",
+    "transliteration": "rig pa'i ngang du zhu ba",
+    "tradition": "mahamudra",
+    "scope": "great-wisdom",
+    "tags": ["four-yogas", "mahamudra", "awareness", "non-dual"],
+    "conceptId": "nonMeditation",
+    "teaching": {
+      "source": "Daniel P. Brown, Pointing Out the Great Way, Ch. 13",
+      "text": "Brown describes non-meditation as the practitioner dissolving into awareness like salt dissolving into water. There is no longer a separate 'practitioner' standing apart from awareness and relating to it. The apparent boundary between the knower and the known has completely dissolved. There is just awareness — vast, timeless, and without center or periphery.",
+      "commentary": "Brown's metaphor of salt dissolving into water is precise. Once dissolved, you cannot find the salt as a separate thing — yet the water is now salty through and through. Similarly, the 'practitioner' has dissolved into awareness and cannot be found as separate, yet awareness is 'flavored' by the dissolution."
+    },
+    "lenses": {
+      "physics": {
+        "bridge": "A drop of water returning to the ocean — individual identity dissolving into the whole",
+        "details": "When a drop returns to the ocean, it does not cease to exist — it becomes the ocean. Its 'dropness' was always an arbitrary boundary. Non-meditation is the dissolution of the arbitrary boundary called 'self' into the ocean of awareness, revealing that the boundary was never real."
+      },
+      "cogsci": {
+        "bridge": "Ego dissolution reported in advanced meditation and psychedelic research",
+        "details": "Neuroscience documents ego dissolution states where the sense of separate selfhood temporarily vanishes. Non-meditation represents the stabilization of this dissolution — not as a temporary state but as the ongoing recognition that no separate self was ever there to dissolve."
+      },
+      "ai": {
+        "bridge": "The user interface disappearing — the system operates without a separate control layer",
+        "details": "Normally, a user interacts with a system through an interface. Non-meditation is like the interface dissolving — there is no longer a separate control layer (the meditator) managing the system (awareness). The system operates directly as itself, without mediation."
+      }
+    },
+    "meditation": {
+      "duration": "No fixed duration — continuous",
+      "posture": "Natural and uncontrived",
+      "method": "Following Brown's teaching: imagine you are like salt being placed in water. The salt does not try to dissolve — it simply does, naturally. Let whatever sense of a separate 'you' remains simply dissolve into the ocean of awareness. Do not try to make this happen — just as salt dissolving is not an act of effort but a natural process. Notice any remaining sense of 'I am practicing' and let it dissolve. Notice any remaining sense of 'I am awareness' and let it dissolve. What remains is not nothing and not something. It is awareness, knowing itself, without any separation. Rest here — or rather, notice you have always been here."
+    },
+    "citation": {
+      "author": "Daniel P. Brown",
+      "work": "Pointing Out the Great Way",
+      "detail": "Chapter 13: Non-Meditation",
+      "quote": "In non-meditation, the practitioner dissolves into awareness like salt into water. You can no longer find the practitioner as separate from awareness. There is just awareness, timelessly present, neither meditating nor not meditating."
+    },
+    "journalPrompt": "Brown uses the metaphor of salt dissolving into water. What does it feel like when the sense of a separate 'meditator' begins to dissolve? What remains?",
+    "reflectionPrompt": "After the salt dissolves, the water is salty but you cannot find the salt. After the meditator dissolves, awareness is present but you cannot find the meditator. What does this tell you about the nature of identity?"
+  },
+  {
+    "day": 331,
+    "month": "four-yogas",
+    "season": "integration",
+    "week": 48,
+    "title": "Brown on Non-Meditation: Neither Meditating Nor Not Meditating",
+    "tibetan": "སྒོམ་པ་མེད་མ་སྒོམ་པའང་མེད",
+    "transliteration": "sgom pa med ma sgom pa'ang med",
+    "tradition": "mahamudra",
+    "scope": "great-wisdom",
+    "tags": ["four-yogas", "mahamudra", "awareness", "non-dual"],
+    "conceptId": "nonMeditation",
+    "teaching": {
+      "source": "Daniel P. Brown, Pointing Out the Great Way, Ch. 13",
+      "text": "Brown emphasizes that non-meditation transcends the very dichotomy of meditation and non-meditation. It is not 'not meditating' as opposed to 'meditating.' That would still be a duality. Rather, the entire framework of meditation/non-meditation has dissolved. There is just awareness, timelessly present, that has nothing to do with the categories of practice.",
+      "commentary": "This is the subtlest point of the entire path. The mind wants to land somewhere — either 'I am meditating' or 'I am not meditating.' Non-meditation refuses both landing spots. It is the free fall of being without any ground to land on — and the discovery that groundlessness itself is the ground."
+    },
+    "lenses": {
+      "physics": {
+        "bridge": "Transcending the classical binary — quantum superposition as both and neither",
+        "details": "A quantum bit exists in superposition — not 0 or 1 but a state that transcends the binary. Non-meditation is the consciousness analogue: not meditating and not not-meditating — a state that transcends the binary of practice and non-practice entirely."
+      },
+      "cogsci": {
+        "bridge": "Beyond dual-process theory — a mode that transcends System 1 and System 2",
+        "details": "Cognitive science distinguishes between automatic (System 1) and deliberate (System 2) processing. Non-meditation transcends both — it is neither automatic habit nor deliberate effort. It is a mode of being that does not fit neatly into either category."
+      },
+      "ai": {
+        "bridge": "A system that functions optimally in the absence of any objective function",
+        "details": "Most AI systems require an objective function to operate. Non-meditation is like a system that functions perfectly without any objective function — it does not optimize for anything, yet its behavior is perfectly appropriate. The absence of a goal does not produce dysfunction but freedom."
+      }
+    },
+    "meditation": {
+      "duration": "Timeless",
+      "posture": "Whatever is natural — sitting, standing, walking, lying down",
+      "method": "Notice: right now, are you meditating or not meditating? If you say 'meditating,' question that — who decided to meditate, and can you find that one? If you say 'not meditating,' question that — is awareness not present right now? Let both answers dissolve. Rest in the space that opens when neither answer sticks. This space is neither meditation nor non-meditation. It is just this. Awareness, present, undeniable, unfindable, needing nothing. The entire question of 'am I meditating?' is seen to be irrelevant. The question dissolves. What remains is non-meditation."
+    },
+    "citation": {
+      "author": "Daniel P. Brown",
+      "work": "Pointing Out the Great Way",
+      "detail": "Chapter 13: Beyond the Binary",
+      "quote": "Non-meditation is not the opposite of meditation. It is the dissolution of the entire framework of meditation and non-meditation. There is just awareness, neither meditating nor not meditating, timelessly present, requiring nothing."
+    },
+    "journalPrompt": "Sit with the question: am I meditating right now, or not? Let both answers dissolve. What remains in the space between?",
+    "reflectionPrompt": "If non-meditation is neither meditating nor not-meditating, can it even be called a 'yoga' or a 'practice'? What are the limits of language here?"
+  },
+  {
+    "day": 332,
+    "month": "four-yogas",
+    "season": "integration",
+    "week": 48,
+    "title": "DiPerna on the Four Yogas and State-Stages",
+    "tibetan": "གནས་སྐབས་ཀྱི་རིམ་པ",
+    "transliteration": "gnas skabs kyi rim pa",
+    "tradition": "integral",
+    "scope": "great-wisdom",
+    "tags": ["four-yogas", "developmental", "awareness", "non-dual"],
+    "conceptId": "fourYogas",
+    "teaching": {
+      "source": "Dustin DiPerna, Streams of Wisdom, Ch. 8",
+      "text": "DiPerna maps the four yogas of Mahamudra to what Ken Wilber calls 'state-stages' — progressively deeper recognitions of the nature of consciousness. One-pointedness corresponds to stabilizing the witness state, simplicity to the causal state of formless awareness, one-taste to the nondual state, and non-meditation to the ultimate or 'suchness' state beyond all categories.",
+      "commentary": "This integral mapping reveals that the four yogas are not unique to Mahamudra but reflect a universal developmental sequence found across contemplative traditions. Each yoga deepens the practitioner's recognition in a way that parallels the state-stage progression described in Wilber's integral framework."
+    },
+    "lenses": {
+      "physics": {
+        "bridge": "Phase transitions mapping onto different organizational levels of matter",
+        "details": "Just as matter passes through distinct phases (solid, liquid, gas, plasma), each with qualitatively different properties, consciousness passes through distinct state-stages. The four yogas mark these phase transitions in awareness — each yoga represents a qualitatively different relationship to experience."
+      },
+      "cogsci": {
+        "bridge": "State-dependent learning and the progression of meditative states in neuroscience",
+        "details": "Neuroscience documents distinct meditative states with characteristic neural signatures — focused attention, open monitoring, nondual awareness. DiPerna's mapping suggests these are not merely different states but a developmental progression, each building on the realization of the previous."
+      },
+      "ai": {
+        "bridge": "Hierarchical representation learning — each layer builds on the previous",
+        "details": "In deep learning, each layer of the network learns increasingly abstract representations, building on the outputs of previous layers. The four yogas similarly build hierarchically — each yoga presupposes the realization of the previous one, creating an increasingly refined 'representation' of awareness."
+      }
+    },
+    "meditation": {
+      "duration": "30-45 min",
+      "posture": "Seven-point posture, comfortable and alert",
+      "method": "In this integral reflection practice, move through the four yogas sequentially. Begin with one-pointedness: stabilize recognition of awareness (5 minutes). Move to simplicity: investigate the nature of awareness and find it unfindable (5 minutes). Move to one-taste: recognize that all experience has the same flavor of awareness (5 minutes). Move to non-meditation: let go of all frameworks, including this one (remaining time). Notice the progression from effort to effortlessness, from seeking to resting. Reflect on how each stage built upon the previous. Dedicate."
+    },
+    "citation": {
+      "author": "Dustin DiPerna",
+      "work": "Streams of Wisdom",
+      "detail": "Chapter 8: State-Stages Across Traditions",
+      "quote": "The four yogas of Mahamudra map remarkably onto Wilber's state-stages of consciousness. One-pointedness stabilizes the subtle witness. Simplicity opens to the causal. One-taste realizes the nondual. Non-meditation is the effortless abiding in what was always already the case."
+    },
+    "journalPrompt": "As you moved through the four yogas in sequence today, what did you notice about the progression? Did each stage feel like it naturally flowed from the previous one?",
+    "reflectionPrompt": "If the four yogas represent a universal developmental sequence, what does this suggest about the nature of consciousness itself — that it has an inherent direction of unfolding?"
+  },
+  {
+    "day": 333,
+    "month": "four-yogas",
+    "season": "integration",
+    "week": 48,
+    "title": "Structure and State: How Development Affects Realization",
+    "tibetan": "རིམ་པ་དང་གནས་སྐབས",
+    "transliteration": "rim pa dang gnas skabs",
+    "tradition": "integral",
+    "scope": "great-wisdom",
+    "tags": ["four-yogas", "developmental", "awareness", "non-dual"],
+    "conceptId": "fourYogas",
+    "teaching": {
+      "source": "Ken Wilber, Integral Spirituality, Ch. 5",
+      "text": "Wilber argues that structure development — the cognitive, moral, and perspectival growth of the practitioner — profoundly affects how state-stage realizations are interpreted and embodied. A practitioner at a traditional-mythic structure will interpret one-taste differently than a practitioner at a pluralistic or integral structure. The state-realization may be the same, but the 'container' shapes its expression.",
+      "commentary": "This insight is crucial for understanding why practitioners at different developmental levels can have genuine but different expressions of the same realization. The four yogas do not unfold in a vacuum — they unfold within the practitioner's existing cognitive and moral development, which colors their expression."
+    },
+    "lenses": {
+      "physics": {
+        "bridge": "The same energy expressed differently in different media — light through glass versus water",
+        "details": "Light changes speed and bends when it passes through different media — glass, water, diamond. The 'light' of realization similarly refracts differently through different developmental 'media.' The light is the same, but its expression varies with the structure through which it passes."
+      },
+      "cogsci": {
+        "bridge": "Top-down processing — pre-existing cognitive structures shape the interpretation of experience",
+        "details": "Cognitive science demonstrates that top-down processing shapes perception. Our existing cognitive frameworks filter and interpret all experience, including meditative realization. Structure development expands the frameworks available, allowing for richer and more inclusive interpretation of state experiences."
+      },
+      "ai": {
+        "bridge": "The same input processed differently by models with different architectures",
+        "details": "The same input data fed to different model architectures produces different outputs. Similarly, the same state-realization 'input' is 'processed' differently by practitioners with different developmental 'architectures' — the realization is genuine in each case, but its expression and integration differ."
+      }
+    },
+    "meditation": {
+      "duration": "30-45 min",
+      "posture": "Seated comfortably, spine upright, open and relaxed",
+      "method": "Begin by resting as awareness. Now reflect on your own developmental journey — how has your understanding of awareness changed as you have grown as a person? Consider: how might a child interpret this experience? A teenager? A mature adult? An elder? Notice that the awareness itself does not change, but the framework for understanding it does. Now release all frameworks and rest in the awareness that precedes all interpretation. Notice that awareness is always simpler and more immediate than any framework can capture. Dedicate with the aspiration that all beings find their way to recognition at whatever developmental stage they are."
+    },
+    "citation": {
+      "author": "Ken Wilber",
+      "work": "Integral Spirituality",
+      "detail": "Chapter 5: States and Structures",
+      "quote": "The state of nondual awareness can be experienced at any structure-stage of development, but it will be interpreted through the lens of that structure. An ethnocentric practitioner will have an ethnocentric interpretation of unity. A worldcentric practitioner will have a worldcentric interpretation. The state is the same; the interpretation varies."
+    },
+    "journalPrompt": "How has your interpretation of awareness and meditation changed over the years? Can you see how your developmental growth has affected how you understand your practice?",
+    "reflectionPrompt": "If the same awareness can be interpreted through many different developmental lenses, which interpretation is 'correct'? Or is the question itself misguided?"
+  },
+  {
+    "day": 334,
+    "month": "four-yogas",
+    "season": "integration",
+    "week": 48,
+    "title": "Streams of Awakening Across Traditions",
+    "tibetan": "བྱང་ཆུབ་ཀྱི་རྒྱུན",
+    "transliteration": "byang chub kyi rgyun",
+    "tradition": "integral",
+    "scope": "great-wisdom",
+    "tags": ["four-yogas", "developmental", "awareness", "non-dual", "integration"],
+    "conceptId": "fourYogas",
+    "teaching": {
+      "source": "Dustin DiPerna, Streams of Wisdom, Ch. 10",
+      "text": "DiPerna identifies multiple 'streams of awakening' across world contemplative traditions — each tradition illuminating different aspects of the same fundamental territory. The four yogas of Mahamudra represent one such stream. Zen's progression from initial kensho to deep satori represents another. Christian mysticism's purgative-illuminative-unitive path is yet another. Each stream maps a genuine path through the same landscape of consciousness.",
+      "commentary": "This integral view honors the uniqueness of each tradition while recognizing the common ground they share. The four yogas are not the only way to map the path, but they are one of the most precise and complete maps available. Placing them alongside other traditions enriches understanding of each."
+    },
+    "lenses": {
+      "physics": {
+        "bridge": "Multiple mathematical formalisms describing the same physical reality — Lagrangian, Hamiltonian, Feynman path integral",
+        "details": "Physics has multiple equivalent formalisms for describing the same reality — the Lagrangian, Hamiltonian, and path integral approaches all yield the same predictions but offer different insights. Similarly, different contemplative traditions are different 'formalisms' for the same territory of awakening, each highlighting different features."
+      },
+      "cogsci": {
+        "bridge": "Cross-cultural psychology revealing universal structures beneath cultural variation",
+        "details": "Cross-cultural research reveals universal cognitive structures that manifest differently across cultures. DiPerna's thesis is the contemplative analogue — there are universal structures of awakening (state-stages) that manifest differently across contemplative traditions, yet the deep structure is shared."
+      },
+      "ai": {
+        "bridge": "Different training approaches converging on similar internal representations",
+        "details": "Research shows that different AI training methods can converge on similar internal representations. Different contemplative traditions, like different training methods, may converge on similar 'internal representations' of awakening — the surface techniques differ but the deep learned features are shared."
+      }
+    },
+    "meditation": {
+      "duration": "30-45 min",
+      "posture": "Seven-point posture, open and inclusive awareness",
+      "method": "Begin by resting as awareness in the Mahamudra style. Now bring to mind other contemplative traditions you have encountered — perhaps Zen, Christian contemplation, Sufi practice, Advaita Vedanta, or others. Without leaving the recognition of awareness, appreciate that practitioners in all these traditions have touched the same fundamental reality through different gates. Let your heart open to all traditions as streams flowing toward the same ocean. Rest in the awareness that is the common ground of all awakening. Dedicate the merit to all practitioners everywhere, in every tradition, that they may realize the nature of their own awareness."
+    },
+    "citation": {
+      "author": "Dustin DiPerna",
+      "work": "Streams of Wisdom",
+      "detail": "Chapter 10: Multiple Streams, One Ocean",
+      "quote": "Awakening is not the property of any single tradition. It is a universal human potential that has been mapped by multiple streams of wisdom across cultures and centuries. Each stream illuminates different facets of the same jewel. An integral approach honors them all while privileging none."
+    },
+    "journalPrompt": "What contemplative traditions have influenced your path? How might practitioners from other traditions describe the same awareness you have been exploring through the four yogas?",
+    "reflectionPrompt": "If awakening is a universal human potential expressed through many traditions, what does this suggest about the nature of being human?"
+  }
+]

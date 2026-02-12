@@ -2,7 +2,14 @@
 
 import { useState } from 'react'
 import Link from 'next/link'
-import { teachings, getTeaching, getScopeDisplayName } from '@/lib/data/teachings'
+import { useCurriculum } from '@/lib/hooks/useCurriculum'
+import { MONTH_INFO, SEASON_INFO } from '@/types/teaching'
+import { TRADITION_LABELS, SEASON_LABELS } from '@/lib/data/teachings/index'
+import { ViewModeSwitcher } from '@/components/daily/ViewModeSwitcher'
+import { MeditationGuide } from '@/components/daily/MeditationGuide'
+import { LineageQuote } from '@/components/daily/LineageQuote'
+import { JournalEntry } from '@/components/daily/JournalEntry'
+import { MonthOverview } from '@/components/daily/MonthOverview'
 
 type LensKey = 'physics' | 'cogsci' | 'ai'
 
@@ -13,58 +20,95 @@ const lensLabels: Record<LensKey, string> = {
 }
 
 export default function DailyPage() {
+  const {
+    entry,
+    currentDay,
+    totalDays,
+    viewMode,
+    completedDays,
+    isLoading,
+    progressPercentage,
+    goToDay,
+    goToNext,
+    goToPrevious,
+    changeViewMode,
+    markDayCompleted,
+  } = useCurriculum()
+
   const [activeLens, setActiveLens] = useState<LensKey>('physics')
-  const [currentDay, setCurrentDay] = useState(1)
 
-  const teaching = getTeaching(currentDay)
-  const scopeLabel = getScopeDisplayName(teaching.scope).toUpperCase()
-  const totalDays = teachings.length
-
-  const goToPrevious = () => {
-    if (currentDay > 1) {
-      setCurrentDay(currentDay - 1)
-      setActiveLens('physics')
-    }
+  if (isLoading || !entry) {
+    return (
+      <main className="min-h-screen bg-bodhi-bg-primary flex items-center justify-center">
+        <div className="animate-breathe">
+          <p className="font-serif text-lg text-bodhi-text-tertiary">Loading teaching...</p>
+        </div>
+      </main>
+    )
   }
 
-  const goToNext = () => {
-    if (currentDay < totalDays) {
-      setCurrentDay(currentDay + 1)
-      setActiveLens('physics')
-    }
-  }
+  const monthInfo = MONTH_INFO[entry.month]
+  const seasonInfo = SEASON_INFO[entry.season]
+  const traditionLabel = TRADITION_LABELS[entry.tradition]
 
   return (
     <main className="min-h-screen bg-bodhi-bg-primary px-6 md:px-12 lg:px-16 py-12 md:py-16">
+      {/* Header */}
+      <div className="max-w-[700px] mx-auto mb-10">
+        <div className="flex items-center justify-between mb-6">
+          <Link
+            href="/"
+            className="font-sans text-sm text-bodhi-text-tertiary hover:text-bodhi-gold transition-colors"
+          >
+            &larr; Home
+          </Link>
+          <ViewModeSwitcher current={viewMode} onChange={changeViewMode} />
+        </div>
 
-      {/* Header area */}
-      <div className="max-w-[700px] mx-auto mb-12">
-        <Link
-          href="/"
-          className="font-sans text-sm text-bodhi-text-tertiary hover:text-bodhi-gold transition-colors inline-block mb-8"
-        >
-          &larr; Home
-        </Link>
+        {/* Day / Month / Season context */}
+        <div className="space-y-1">
+          <p className="bodhi-label">DAILY TEACHING</p>
+          <div className="flex items-center gap-2 flex-wrap">
+            <span className="font-sans text-[11px] tracking-[0.15em] uppercase text-bodhi-text-tertiary">
+              Day {currentDay} of {totalDays}
+            </span>
+            <span className="text-bodhi-text-faint">&middot;</span>
+            <span className="font-sans text-[11px] tracking-[0.15em] uppercase text-bodhi-gold/70">
+              {monthInfo.label}
+            </span>
+            <span className="text-bodhi-text-faint">&middot;</span>
+            <span className="font-sans text-[11px] tracking-[0.15em] uppercase text-bodhi-text-faint">
+              {seasonInfo.label}
+            </span>
+          </div>
 
-        <p className="bodhi-label mb-2">DAILY TEACHING</p>
-        <p className="font-sans text-[11px] tracking-[0.15em] uppercase text-bodhi-text-tertiary">
-          {scopeLabel} &middot; DAY {currentDay}
-        </p>
+          {/* Progress bar */}
+          <div className="mt-3 h-[2px] bg-bodhi-text-faint/10 rounded-full overflow-hidden">
+            <div
+              className="h-full bg-gradient-to-r from-bodhi-saffron/60 to-bodhi-gold transition-all duration-500"
+              style={{ width: `${(currentDay / totalDays) * 100}%` }}
+            />
+          </div>
+        </div>
       </div>
 
-      {/* Main teaching */}
-      <div className="max-w-[700px] mx-auto text-center mb-16">
-        {/* Title */}
+      {/* Teaching Title */}
+      <div className="max-w-[700px] mx-auto text-center mb-12">
+        {/* Tradition + Scope badges */}
+        <div className="flex items-center justify-center gap-2 mb-4">
+          <span className="scope-pill text-[10px]">{traditionLabel}</span>
+          <span className="scope-pill text-[10px]">{monthInfo.subtitle}</span>
+        </div>
+
         <h1 className="font-serif text-3xl md:text-4xl font-light text-bodhi-text-primary mb-3">
-          {teaching.title}
+          {entry.title}
         </h1>
 
-        {/* Tibetan + transliteration */}
         <p className="font-tibetan text-sm text-bodhi-text-tertiary mb-1">
-          {teaching.tibetan}
+          {entry.tibetan}
         </p>
         <p className="font-sans text-xs text-bodhi-text-faint italic tracking-wide">
-          {teaching.transliteration}
+          {entry.transliteration}
         </p>
 
         {/* Gold separator */}
@@ -72,25 +116,24 @@ export default function DailyPage() {
 
         {/* Teaching text */}
         <p className="font-serif text-xl leading-[1.9] text-bodhi-text-secondary text-left">
-          {teaching.traditional.text}
+          {entry.teaching.text}
         </p>
 
         {/* Source */}
         <p className="font-serif text-sm italic text-bodhi-text-tertiary mt-4 text-left">
-          &mdash; {teaching.traditional.source}
+          &mdash; {entry.teaching.source}
         </p>
 
         {/* Commentary */}
-        <p className="font-sans text-base text-bodhi-text-secondary leading-relaxed mt-8 text-left">
-          {teaching.traditional.commentary}
+        <p className="font-sans text-base text-bodhi-text-secondary leading-relaxed mt-6 text-left">
+          {entry.teaching.commentary}
         </p>
       </div>
 
       {/* Scientific Lenses */}
-      <div className="max-w-[700px] mx-auto mb-16">
+      <div className="max-w-[700px] mx-auto mb-12">
         <p className="bodhi-label mb-4">LENSES</p>
 
-        {/* Lens tabs */}
         <div className="flex gap-2 mb-6">
           {(Object.keys(lensLabels) as LensKey[]).map((key) => (
             <button
@@ -103,30 +146,70 @@ export default function DailyPage() {
           ))}
         </div>
 
-        {/* Active lens content */}
         <div className="animate-fade-in">
           <p className="font-sans text-base text-bodhi-text-secondary leading-relaxed">
-            {teaching.lenses[activeLens].bridge}
+            {entry.lenses[activeLens].bridge}
           </p>
           <p className="font-sans text-sm text-bodhi-text-tertiary mt-2 leading-relaxed">
-            {teaching.lenses[activeLens].details}
+            {entry.lenses[activeLens].details}
           </p>
         </div>
       </div>
 
-      {/* Reflection */}
-      <div className="max-w-[700px] mx-auto mb-16">
+      {/* Meditation Guide */}
+      <div className="max-w-[700px] mx-auto mb-12">
+        <MeditationGuide meditation={entry.meditation} />
+      </div>
+
+      {/* Lineage Quote */}
+      <div className="max-w-[700px] mx-auto mb-12">
+        <p className="bodhi-label mb-4">FROM THE LINEAGE</p>
+        <LineageQuote citation={entry.citation} />
+      </div>
+
+      {/* Journal Entry */}
+      <div className="max-w-[700px] mx-auto mb-12">
+        <JournalEntry day={currentDay} prompt={entry.journalPrompt} />
+      </div>
+
+      {/* Reflection Prompt */}
+      <div className="max-w-[700px] mx-auto mb-12">
         <div className="gold-border-left">
           <p className="bodhi-label mb-3">REFLECTION</p>
           <p className="font-serif text-lg italic text-bodhi-text-secondary leading-relaxed">
-            {teaching.reflectionPrompt}
+            {entry.reflectionPrompt}
           </p>
         </div>
       </div>
 
-      {/* Day navigation */}
+      {/* Mark Complete */}
+      <div className="max-w-[700px] mx-auto mb-12 text-center">
+        <button
+          onClick={markDayCompleted}
+          className={`gold-button px-8 ${
+            completedDays.includes(currentDay) ? 'opacity-50 cursor-default' : ''
+          }`}
+          disabled={completedDays.includes(currentDay)}
+        >
+          {completedDays.includes(currentDay)
+            ? 'Day Completed'
+            : 'Mark Day as Complete'}
+        </button>
+      </div>
+
+      {/* Month Overview */}
+      <div className="max-w-[700px] mx-auto mb-8">
+        <MonthOverview
+          currentDay={currentDay}
+          currentMonth={entry.month}
+          completedDays={completedDays}
+          onDayClick={goToDay}
+        />
+      </div>
+
+      {/* Day Navigation */}
       <div className="max-w-[700px] mx-auto">
-        <div className="flex items-center justify-between mb-8">
+        <div className="flex items-center justify-between">
           <button
             onClick={goToPrevious}
             disabled={currentDay <= 1}
@@ -149,27 +232,7 @@ export default function DailyPage() {
             Next &rarr;
           </button>
         </div>
-
-        {/* Teaching cycle dots */}
-        <div className="flex items-center justify-center gap-1.5 flex-wrap">
-          {Array.from({ length: totalDays }, (_, i) => i + 1).map((day) => (
-            <button
-              key={day}
-              onClick={() => {
-                setCurrentDay(day)
-                setActiveLens('physics')
-              }}
-              className={`w-2.5 h-2.5 rounded-full transition-all duration-300 ${
-                day === currentDay
-                  ? 'bg-bodhi-saffron scale-125'
-                  : 'bg-bodhi-text-faint/30 hover:bg-bodhi-text-faint/60'
-              }`}
-              aria-label={`Go to day ${day}`}
-            />
-          ))}
-        </div>
       </div>
-
     </main>
   )
 }
