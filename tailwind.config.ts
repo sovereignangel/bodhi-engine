@@ -10,34 +10,63 @@ const config: Config = {
     extend: {
       colors: {
         bodhi: {
-          gold: '#ffd369',
-          'gold-dark': '#c9a227',
-          pink: '#e94560',
-          cyan: '#00d9ff',
-          green: '#00ff88',
-          red: '#ff6b6b',
+          gold: '#A37E2C',
+          'gold-light': '#C9A227',
+          'gold-dark': '#8B6914',
+          saffron: '#B8860B',
           bg: {
-            dark: '#0a0a0f',
-            mid: '#1a1a2e',
-            light: '#16213e',
+            primary: '#FAFAFA',
+            warm: '#F5F2ED',
+            ivory: '#FEFCF7',
+            card: '#FFFFFF',
+          },
+          text: {
+            primary: '#1A1A1A',
+            secondary: '#555555',
+            tertiary: '#9B9B9B',
+            faint: '#C5C5C5',
+          },
+          border: {
+            DEFAULT: 'rgba(163,126,44,0.12)',
+            hover: 'rgba(163,126,44,0.25)',
+            strong: 'rgba(163,126,44,0.40)',
           },
         },
       },
       fontFamily: {
-        serif: ['Cormorant Garamond', 'Georgia', 'serif'],
-        tibetan: ['Noto Serif Tibetan', 'serif'],
+        serif: ['var(--font-cormorant)', 'Georgia', 'serif'],
+        sans: ['var(--font-inter)', 'system-ui', '-apple-system', 'sans-serif'],
+        tibetan: ['var(--font-tibetan)', 'serif'],
       },
-      backgroundImage: {
-        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-        'bodhi-gradient': 'linear-gradient(180deg, #0a0a0f 0%, #1a1a2e 50%, #0f0f1a 100%)',
+      borderRadius: {
+        card: '16px',
+      },
+      spacing: {
+        section: '120px',
+        'section-sm': '80px',
       },
       animation: {
-        'glow-pulse': 'glow-pulse 2s ease-in-out infinite',
+        'breathe': 'breathe 4s ease-in-out infinite',
+        'fade-in': 'fadeIn 0.6s ease-out',
+        'slide-up': 'slideUp 0.5s ease-out',
+        'gold-shimmer': 'goldShimmer 3s ease-in-out infinite',
       },
       keyframes: {
-        'glow-pulse': {
-          '0%, 100%': { opacity: '1' },
-          '50%': { opacity: '0.7' },
+        breathe: {
+          '0%, 100%': { transform: 'scale(1)', opacity: '1' },
+          '50%': { transform: 'scale(1.02)', opacity: '0.85' },
+        },
+        fadeIn: {
+          '0%': { opacity: '0' },
+          '100%': { opacity: '1' },
+        },
+        slideUp: {
+          '0%': { opacity: '0', transform: 'translateY(12px)' },
+          '100%': { opacity: '1', transform: 'translateY(0)' },
+        },
+        goldShimmer: {
+          '0%': { backgroundPosition: '-200% center' },
+          '100%': { backgroundPosition: '200% center' },
         },
       },
     },

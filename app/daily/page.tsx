@@ -1,133 +1,175 @@
 'use client'
 
-import { useDailyTeaching } from '@/lib/hooks/useDailyTeaching'
-import { DailyTeaching, ScientificLens, TeachingCycle, ReflectionPrompt } from '@/components/daily'
-import { ArrowLeft, BookOpen } from 'lucide-react'
+import { useState } from 'react'
 import Link from 'next/link'
+import { teachings, getTeaching, getScopeDisplayName } from '@/lib/data/teachings'
+
+type LensKey = 'physics' | 'cogsci' | 'ai'
+
+const lensLabels: Record<LensKey, string> = {
+  physics: 'Physics',
+  cogsci: 'Cognitive Science',
+  ai: 'AI',
+}
 
 export default function DailyPage() {
-  const {
-    teaching,
-    cycleInfo,
-    currentDay,
-    completedDays,
-    isLoading,
-    markDayCompleted,
-    isDayCompleted,
-    goToDay,
-  } = useDailyTeaching()
+  const [activeLens, setActiveLens] = useState<LensKey>('physics')
+  const [currentDay, setCurrentDay] = useState(1)
 
-  if (isLoading || !teaching || !cycleInfo) {
-    return (
-      <div className="min-h-screen bg-bodhi-bg-dark flex items-center justify-center">
-        <div className="text-bodhi-gold animate-pulse">Loading teachings...</div>
-      </div>
-    )
+  const teaching = getTeaching(currentDay)
+  const scopeLabel = getScopeDisplayName(teaching.scope).toUpperCase()
+  const totalDays = teachings.length
+
+  const goToPrevious = () => {
+    if (currentDay > 1) {
+      setCurrentDay(currentDay - 1)
+      setActiveLens('physics')
+    }
+  }
+
+  const goToNext = () => {
+    if (currentDay < totalDays) {
+      setCurrentDay(currentDay + 1)
+      setActiveLens('physics')
+    }
   }
 
   return (
-    <main className="min-h-screen bg-bodhi-bg-dark pb-20">
-      {/* Header */}
-      <header className="sticky top-0 z-30 bg-bodhi-bg-dark/80 backdrop-blur-md border-b border-bodhi-gold/10">
-        <div className="max-w-4xl mx-auto px-4 py-3 flex items-center justify-between">
-          <Link
-            href="/"
-            className="flex items-center gap-2 text-bodhi-gold hover:text-bodhi-gold/80 transition-colors"
-          >
-            <ArrowLeft className="w-5 h-5" />
-            <span className="text-sm">Dashboard</span>
-          </Link>
+    <main className="min-h-screen bg-bodhi-bg-primary px-6 md:px-12 lg:px-16 py-12 md:py-16">
 
-          <div className="flex items-center gap-2">
-            <BookOpen className="w-5 h-5 text-bodhi-gold" />
-            <span className="text-lg font-semibold text-bodhi-gold">Daily Teaching</span>
-          </div>
+      {/* Header area */}
+      <div className="max-w-[700px] mx-auto mb-12">
+        <Link
+          href="/"
+          className="font-sans text-sm text-bodhi-text-tertiary hover:text-bodhi-gold transition-colors inline-block mb-8"
+        >
+          &larr; Home
+        </Link>
 
-          <div className="text-right">
-            <div className="text-xs text-gray-500">Cycle {cycleInfo.cycleNumber}</div>
-            <div className="text-sm font-semibold text-white">
-              Day {currentDay} / 21
-            </div>
-          </div>
+        <p className="bodhi-label mb-2">DAILY TEACHING</p>
+        <p className="font-sans text-[11px] tracking-[0.15em] uppercase text-bodhi-text-tertiary">
+          {scopeLabel} &middot; DAY {currentDay}
+        </p>
+      </div>
+
+      {/* Main teaching */}
+      <div className="max-w-[700px] mx-auto text-center mb-16">
+        {/* Title */}
+        <h1 className="font-serif text-3xl md:text-4xl font-light text-bodhi-text-primary mb-3">
+          {teaching.title}
+        </h1>
+
+        {/* Tibetan + transliteration */}
+        <p className="font-tibetan text-sm text-bodhi-text-tertiary mb-1">
+          {teaching.tibetan}
+        </p>
+        <p className="font-sans text-xs text-bodhi-text-faint italic tracking-wide">
+          {teaching.transliteration}
+        </p>
+
+        {/* Gold separator */}
+        <div className="w-[40px] h-[1px] bg-bodhi-saffron mx-auto my-8" />
+
+        {/* Teaching text */}
+        <p className="font-serif text-xl leading-[1.9] text-bodhi-text-secondary text-left">
+          {teaching.traditional.text}
+        </p>
+
+        {/* Source */}
+        <p className="font-serif text-sm italic text-bodhi-text-tertiary mt-4 text-left">
+          &mdash; {teaching.traditional.source}
+        </p>
+
+        {/* Commentary */}
+        <p className="font-sans text-base text-bodhi-text-secondary leading-relaxed mt-8 text-left">
+          {teaching.traditional.commentary}
+        </p>
+      </div>
+
+      {/* Scientific Lenses */}
+      <div className="max-w-[700px] mx-auto mb-16">
+        <p className="bodhi-label mb-4">LENSES</p>
+
+        {/* Lens tabs */}
+        <div className="flex gap-2 mb-6">
+          {(Object.keys(lensLabels) as LensKey[]).map((key) => (
+            <button
+              key={key}
+              onClick={() => setActiveLens(key)}
+              className={activeLens === key ? 'lens-tab-active' : 'lens-tab'}
+            >
+              {lensLabels[key]}
+            </button>
+          ))}
         </div>
-      </header>
 
-      {/* Content */}
-      <div className="max-w-4xl mx-auto px-4 py-8">
-        <div className="grid lg:grid-cols-3 gap-6">
-          {/* Main content - 2 columns */}
-          <div className="lg:col-span-2 space-y-6">
-            {/* Teaching card */}
-            <DailyTeaching
-              teaching={teaching}
-              onMarkComplete={markDayCompleted}
-              isCompleted={isDayCompleted(currentDay)}
-            />
-
-            {/* Scientific lenses */}
-            <ScientificLens lenses={teaching.lenses} />
-
-            {/* Reflection prompt */}
-            <ReflectionPrompt prompt={teaching.reflectionPrompt} />
-          </div>
-
-          {/* Sidebar - 1 column */}
-          <div className="space-y-6">
-            {/* Cycle progress */}
-            <TeachingCycle
-              currentDay={currentDay}
-              completedDays={completedDays}
-              onDayClick={goToDay}
-            />
-
-            {/* Related concept link */}
-            <div className="thangka-card">
-              <h3 className="text-sm font-bold text-gray-400 uppercase tracking-wider mb-3">
-                Related Concept
-              </h3>
-              <Link
-                href={`/graph?highlight=${teaching.conceptId}`}
-                className="flex items-center gap-3 p-3 rounded-lg bg-bodhi-bg-dark/50 hover:bg-bodhi-bg-dark transition-colors"
-              >
-                <div className="w-10 h-10 rounded-full bg-bodhi-gold/20 flex items-center justify-center">
-                  <span className="font-tibetan text-bodhi-gold text-lg">
-                    {teaching.tibetan.charAt(0)}
-                  </span>
-                </div>
-                <div>
-                  <div className="text-sm font-medium text-white">{teaching.title}</div>
-                  <div className="text-xs text-gray-500">View in Knowledge Graph</div>
-                </div>
-              </Link>
-            </div>
-
-            {/* Quick stats */}
-            <div className="thangka-card">
-              <h3 className="text-sm font-bold text-gray-400 uppercase tracking-wider mb-3">
-                Your Progress
-              </h3>
-              <div className="space-y-3">
-                <div className="flex justify-between items-center">
-                  <span className="text-sm text-gray-400">Days Completed</span>
-                  <span className="text-sm font-semibold text-bodhi-green">
-                    {completedDays.length} / 21
-                  </span>
-                </div>
-                <div className="h-2 bg-bodhi-bg-dark rounded-full overflow-hidden">
-                  <div
-                    className="h-full bg-bodhi-green transition-all duration-500"
-                    style={{ width: `${(completedDays.length / 21) * 100}%` }}
-                  />
-                </div>
-                <div className="flex justify-between items-center text-xs text-gray-500">
-                  <span>Days Remaining: {21 - completedDays.length}</span>
-                  <span>{Math.round((completedDays.length / 21) * 100)}%</span>
-                </div>
-              </div>
-            </div>
-          </div>
+        {/* Active lens content */}
+        <div className="animate-fade-in">
+          <p className="font-sans text-base text-bodhi-text-secondary leading-relaxed">
+            {teaching.lenses[activeLens].bridge}
+          </p>
+          <p className="font-sans text-sm text-bodhi-text-tertiary mt-2 leading-relaxed">
+            {teaching.lenses[activeLens].details}
+          </p>
         </div>
       </div>
+
+      {/* Reflection */}
+      <div className="max-w-[700px] mx-auto mb-16">
+        <div className="gold-border-left">
+          <p className="bodhi-label mb-3">REFLECTION</p>
+          <p className="font-serif text-lg italic text-bodhi-text-secondary leading-relaxed">
+            {teaching.reflectionPrompt}
+          </p>
+        </div>
+      </div>
+
+      {/* Day navigation */}
+      <div className="max-w-[700px] mx-auto">
+        <div className="flex items-center justify-between mb-8">
+          <button
+            onClick={goToPrevious}
+            disabled={currentDay <= 1}
+            className={`ghost-button ${
+              currentDay <= 1 ? 'opacity-30 cursor-not-allowed' : ''
+            }`}
+          >
+            &larr; Previous
+          </button>
+          <span className="font-sans text-sm text-bodhi-text-tertiary">
+            {currentDay} / {totalDays}
+          </span>
+          <button
+            onClick={goToNext}
+            disabled={currentDay >= totalDays}
+            className={`ghost-button ${
+              currentDay >= totalDays ? 'opacity-30 cursor-not-allowed' : ''
+            }`}
+          >
+            Next &rarr;
+          </button>
+        </div>
+
+        {/* Teaching cycle dots */}
+        <div className="flex items-center justify-center gap-1.5 flex-wrap">
+          {Array.from({ length: totalDays }, (_, i) => i + 1).map((day) => (
+            <button
+              key={day}
+              onClick={() => {
+                setCurrentDay(day)
+                setActiveLens('physics')
+              }}
+              className={`w-2.5 h-2.5 rounded-full transition-all duration-300 ${
+                day === currentDay
+                  ? 'bg-bodhi-saffron scale-125'
+                  : 'bg-bodhi-text-faint/30 hover:bg-bodhi-text-faint/60'
+              }`}
+              aria-label={`Go to day ${day}`}
+            />
+          ))}
+        </div>
+      </div>
+
     </main>
   )
 }

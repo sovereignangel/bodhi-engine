@@ -99,9 +99,9 @@ export const teachings: DailyTeaching[] = [
     tibetan: 'སྐྱབས་འགྲོ།',
     transliteration: 'kyab dro',
     traditional: {
-      source: 'Lamrim Chenmo, Chapter 7',
+      source: 'Lamrim Chenmo, Chapter 7; cf. Brown, Pointing Out the Great Way, Ch. 1',
       text: 'I take refuge in the Buddha, the Dharma, and the Sangha. Through the merit of practicing generosity and other virtues, may I attain Buddhahood for the benefit of all beings.',
-      commentary: 'The three jewels: the teacher who shows the path, the teachings themselves, and the community of practitioners.',
+      commentary: 'The three jewels: the teacher who shows the path, the teachings themselves, and the community of practitioners. Brown emphasizes that in the Mahamudra tradition, refuge in the guru (lama) is paramount — the pointing-out instructions can only be transmitted through a living teacher who has realized the nature of mind.',
     },
     lenses: {
       physics: {
@@ -185,9 +185,9 @@ export const teachings: DailyTeaching[] = [
     tibetan: 'སྡུག་བསྔལ།',
     transliteration: 'duk ngal',
     traditional: {
-      source: 'Lamrim Chenmo, Chapter 10',
+      source: 'Lamrim Chenmo, Chapter 10; cf. Brown, Pointing Out the Great Way, Ch. 2',
       text: 'The suffering of suffering, the suffering of change, and the all-pervasive suffering of conditioning - these three characterize all of cyclic existence.',
-      commentary: 'Even pleasant experiences contain the seeds of suffering through impermanence and dependence.',
+      commentary: 'Even pleasant experiences contain the seeds of suffering through impermanence and dependence. Daniel P. Brown notes that recognition of suffering\'s pervasiveness is what generates the genuine motivation (\'dun pa) needed to undertake the arduous training of concentration.',
     },
     lenses: {
       physics: {
@@ -213,9 +213,9 @@ export const teachings: DailyTeaching[] = [
     tibetan: 'བསླབ་པ་གསུམ།',
     transliteration: 'labpa sum',
     traditional: {
-      source: 'Lamrim Chenmo, Chapter 11',
+      source: 'Lamrim Chenmo, Chapter 11; cf. Brown, Pointing Out the Great Way, Ch. 3-5',
       text: 'Train in ethics to calm gross disturbances. Train in concentration to achieve mental stability. Train in wisdom to cut the root of suffering.',
-      commentary: 'Ethics, concentration, and wisdom form the threefold training for liberation.',
+      commentary: 'Ethics, concentration, and wisdom form the threefold training for liberation. In Brown\'s Mahamudra framework, these map to: preliminary practices (ethics), shamatha with and without support (concentration), and ordinary/extraordinary special insight (wisdom). Brown adds that the Mahamudra tradition offers a fourth training beyond these three: direct recognition of the nature of mind through the pointing-out instructions.',
     },
     lenses: {
       physics: {
@@ -581,9 +581,9 @@ export const teachings: DailyTeaching[] = [
     tibetan: 'སྟོང་པ་ཉིད།',
     transliteration: 'tongpa nyi',
     traditional: {
-      source: 'Lamrim Chenmo, Chapter 13',
+      source: 'Lamrim Chenmo, Chapter 13; cf. Brown, Pointing Out the Great Way, Ch. 8-10',
       text: 'All phenomena are empty of inherent existence. They exist dependently - through causes, conditions, and mental designation. Realizing this is liberation.',
-      commentary: 'Emptiness is not nothingness but the absence of independent existence. All phenomena arise dependently.',
+      commentary: 'Emptiness is not nothingness but the absence of independent existence. All phenomena arise dependently. Daniel P. Brown distinguishes between "ordinary special insight" (vipashyana analyzing emptiness conceptually) and "extraordinary special insight" (Mahamudra\'s Four Yogas) where emptiness is recognized directly as the nature of awareness itself — not as an object of analysis but as the very medium of experience.',
     },
     lenses: {
       physics: {
@@ -624,11 +624,11 @@ export function getScopeDisplayName(scope: TeachingScope): string {
 // Get scope color
 export function getScopeColor(scope: TeachingScope): string {
   const colors: Record<TeachingScope, string> = {
-    foundation: '#ffd369',
-    small: '#e94560',
-    middle: '#00d9ff',
-    'great-method': '#ff6b6b',
-    'great-wisdom': '#00d9ff',
+    foundation: '#B8860B',
+    small: '#A37E2C',
+    middle: '#8B6914',
+    'great-method': '#C9A227',
+    'great-wisdom': '#C9A227',
   }
   return colors[scope]
 }

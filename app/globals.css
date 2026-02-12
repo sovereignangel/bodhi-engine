@@ -4,87 +4,166 @@
 
 @layer base {
   :root {
-    --bodhi-gold: #ffd369;
-    --bodhi-gold-dark: #c9a227;
-    --bodhi-pink: #e94560;
-    --bodhi-cyan: #00d9ff;
-    --bodhi-green: #00ff88;
-    --bodhi-red: #ff6b6b;
-    --bodhi-bg-dark: #0a0a0f;
-    --bodhi-bg-mid: #1a1a2e;
-    --bodhi-bg-light: #16213e;
+    --bodhi-gold: #A37E2C;
+    --bodhi-gold-light: #C9A227;
+    --bodhi-gold-dark: #8B6914;
+    --bodhi-saffron: #B8860B;
   }
 
   body {
-    @apply bg-bodhi-bg-dark text-gray-100;
-    font-family: 'Cormorant Garamond', Georgia, serif;
+    @apply bg-bodhi-bg-primary text-bodhi-text-primary;
+    font-family: var(--font-inter), system-ui, -apple-system, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
   }
 
-  /* Custom scrollbar for dark theme */
+  /* Elegant scrollbar */
   ::-webkit-scrollbar {
-    width: 8px;
-    height: 8px;
+    width: 6px;
+    height: 6px;
   }
 
   ::-webkit-scrollbar-track {
-    @apply bg-bodhi-bg-dark;
+    background: transparent;
   }
 
   ::-webkit-scrollbar-thumb {
-    @apply bg-bodhi-bg-light rounded-full;
+    @apply bg-bodhi-text-faint rounded-full;
   }
 
   ::-webkit-scrollbar-thumb:hover {
-    @apply bg-bodhi-gold/50;
+    background: var(--bodhi-gold);
+    opacity: 0.5;
   }
 }
 
 @layer components {
-  .thangka-card {
-    @apply bg-bodhi-bg-mid border border-bodhi-gold/20 rounded-xl p-6;
-    @apply shadow-lg shadow-bodhi-gold/5;
+  /* Card system */
+  .bodhi-card {
+    @apply bg-bodhi-bg-card rounded-card p-8;
+    border: 1px solid rgba(163,126,44,0.12);
+    transition: all 0.3s ease;
   }
 
-  .thangka-card-hover {
-    @apply thangka-card transition-all duration-300;
-    @apply hover:border-bodhi-gold/40 hover:shadow-bodhi-gold/10;
+  .bodhi-card-hover {
+    @apply bodhi-card;
   }
 
+  .bodhi-card-hover:hover {
+    border-color: rgba(163,126,44,0.25);
+    box-shadow: 0 4px 24px rgba(163,126,44,0.06);
+    transform: translateY(-1px);
+  }
+
+  /* Gold button */
   .gold-button {
-    @apply px-6 py-3 bg-gradient-to-r from-bodhi-gold to-bodhi-gold-dark;
-    @apply text-bodhi-bg-dark font-semibold rounded-lg;
-    @apply transition-all duration-300;
-    @apply hover:shadow-lg hover:shadow-bodhi-gold/30;
+    @apply px-6 py-3 font-sans text-sm font-medium rounded-lg;
+    background: var(--bodhi-saffron);
+    color: white;
+    letter-spacing: 0.05em;
+    transition: all 0.3s ease;
   }
 
+  .gold-button:hover {
+    background: var(--bodhi-gold);
+    box-shadow: 0 4px 16px rgba(163,126,44,0.2);
+  }
+
+  /* Ghost button */
+  .ghost-button {
+    @apply px-6 py-3 font-sans text-sm font-medium rounded-lg;
+    color: var(--bodhi-gold);
+    border: 1px solid rgba(163,126,44,0.25);
+    transition: all 0.3s ease;
+  }
+
+  .ghost-button:hover {
+    background: rgba(163,126,44,0.05);
+    border-color: rgba(163,126,44,0.40);
+  }
+
+  /* Label style (luxury watch typography) */
+  .bodhi-label {
+    @apply font-sans text-xs font-medium tracking-widest uppercase;
+    color: var(--bodhi-gold);
+  }
+
+  /* Section heading */
+  .bodhi-heading {
+    @apply font-serif font-light;
+    color: #1A1A1A;
+  }
+
+  /* Lens tabs */
   .lens-tab {
-    @apply px-4 py-2 rounded-lg text-sm font-medium transition-all;
-    @apply hover:bg-bodhi-bg-light;
+    @apply px-4 py-2 rounded-lg text-sm font-sans font-medium transition-all;
+    color: var(--bodhi-text-tertiary);
+    border: 1px solid transparent;
+  }
+
+  .lens-tab:hover {
+    color: var(--bodhi-text-secondary);
+    background: rgba(163,126,44,0.04);
   }
 
   .lens-tab-active {
-    @apply lens-tab bg-bodhi-bg-light;
+    @apply lens-tab;
+    color: white;
+    background: var(--bodhi-saffron);
+    border-color: var(--bodhi-saffron);
   }
 
-  .glow-gold {
-    filter: drop-shadow(0 0 8px rgba(255, 211, 105, 0.5));
+  /* Gold left border accent */
+  .gold-border-left {
+    border-left: 3px solid var(--bodhi-gold);
+    padding-left: 20px;
   }
 
-  .glow-pink {
-    filter: drop-shadow(0 0 8px rgba(233, 69, 96, 0.5));
+  /* Scope pills */
+  .scope-pill {
+    @apply font-sans text-xs font-medium px-3 py-1 rounded-full;
+    letter-spacing: 0.08em;
   }
 
-  .glow-cyan {
-    filter: drop-shadow(0 0 8px rgba(0, 217, 255, 0.5));
+  .scope-pill-foundation {
+    @apply scope-pill;
+    background: rgba(184,134,11,0.08);
+    color: #B8860B;
+  }
+
+  .scope-pill-small {
+    @apply scope-pill;
+    background: rgba(163,126,44,0.08);
+    color: #A37E2C;
+  }
+
+  .scope-pill-middle {
+    @apply scope-pill;
+    background: rgba(139,105,20,0.08);
+    color: #8B6914;
+  }
+
+  .scope-pill-great {
+    @apply scope-pill;
+    background: rgba(201,162,39,0.10);
+    color: #C9A227;
   }
 }
 
 @layer utilities {
-  .text-shadow-gold {
-    text-shadow: 0 0 20px rgba(255, 211, 105, 0.3);
+  .text-gold-gradient {
+    background: linear-gradient(135deg, #AE8625, #F7EF8A, #D2AC47, #EDC967);
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
   }
 
-  .border-glow-gold {
-    box-shadow: 0 0 15px rgba(255, 211, 105, 0.2);
+  .border-gold-subtle {
+    border-color: rgba(163,126,44,0.12);
+  }
+
+  .border-gold-hover {
+    border-color: rgba(163,126,44,0.25);
   }
 }

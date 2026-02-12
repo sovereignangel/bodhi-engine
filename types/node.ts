@@ -18,7 +18,7 @@ export interface NodePosition {
 export interface GraphNode extends NodeData {
   id: string
   position: NodePosition
-  scope: 'foundation' | 'small' | 'middle' | 'great-method' | 'great-wisdom' | 'enlightenment'
+  scope: 'foundation' | 'small' | 'middle' | 'great-method' | 'great-wisdom' | 'mahamudra' | 'enlightenment'
   color: string
   connections: string[]
 }
@@ -38,5 +38,8 @@ export type NodeId =
   | 'dependentOrigination'
   | 'lowerRealms'
   | 'spiritualGuide'
+  | 'vipashyana'
+  | 'pointingOut'
+  | 'fourYogas'
 
 export type LensType = 'physics' | 'cogsci' | 'ai'

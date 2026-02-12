@@ -130,6 +130,33 @@ export const nodeData: Record<NodeId, NodeData> = {
     cogsci: 'Social learning + mirror neuron activation from expert',
     ai: 'RLHF - learning from human feedback and demonstration',
   },
+  vipashyana: {
+    title: 'Vipashyana',
+    tibetan: 'ལྷག་མཐོང།',
+    subtitle: 'Special Insight',
+    description: 'Analytical meditation that penetrates the nature of reality. After stabilizing the mind through shamatha, vipashyana investigates selflessness and emptiness directly.',
+    physics: 'Spectroscopy - using focused energy to reveal the internal structure of matter',
+    cogsci: 'Deconstructive attention - the trained mind disassembles perceptual constructs to reveal underlying processes',
+    ai: 'Interpretability research - probing neural networks to understand what representations actually encode',
+  },
+  pointingOut: {
+    title: 'Pointing Out',
+    tibetan: 'ངོ་སྤྲོད།',
+    subtitle: 'Ngo Sprod',
+    description: 'The guru\'s direct introduction to the nature of mind. In the Mahamudra tradition, the teacher points out awareness itself - not as an object to find, but as the very medium of all experience.',
+    physics: 'The observer effect - the act of measurement reveals what was always present in the quantum field',
+    cogsci: 'Metacognitive shift - attention turns to recognize itself as awareness rather than its contents',
+    ai: 'Self-supervised learning - the system discovers its own representational structure without external labels',
+  },
+  fourYogas: {
+    title: 'Four Yogas',
+    tibetan: 'རྣལ་འབྱོར་བཞི།',
+    subtitle: 'Mahamudra Realization',
+    description: 'The four stages of Mahamudra realization: One-Pointedness (rtse gcig), Simplicity (spros bral), One Taste (ro gcig), and Nonmeditation (sgom med). From Daniel P. Brown\'s framework in "Pointing Out the Great Way."',
+    physics: 'Phase transitions - water → ice → vapor → plasma, each a fundamentally different state of the same substance',
+    cogsci: 'Stages of expertise - from conscious competence to unconscious mastery where skill becomes nature',
+    ai: 'Emergent capabilities at scale - qualitative shifts in model behavior at critical parameter thresholds',
+  },
 }
 
 // Node IDs grouped by scope for easy iteration
@@ -138,7 +165,8 @@ export const nodesByScope = {
   small: ['lowerRealms', 'refuge', 'karma', 'dependentOrigination'] as NodeId[],
   middle: ['renunciation', 'shamatha'] as NodeId[],
   'great-method': ['tonglen', 'sixPerfections', 'bodhicitta'] as NodeId[],
-  'great-wisdom': ['emptiness'] as NodeId[],
+  'great-wisdom': ['emptiness', 'vipashyana'] as NodeId[],
+  mahamudra: ['pointingOut', 'fourYogas'] as NodeId[],
   enlightenment: ['enlightenment'] as NodeId[],
 }
 

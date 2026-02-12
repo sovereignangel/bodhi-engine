@@ -1,11 +1,20 @@
 import type { Metadata } from 'next'
-import { Cormorant_Garamond, Noto_Serif_Tibetan } from 'next/font/google'
+import { Cormorant_Garamond, Inter, Noto_Serif_Tibetan } from 'next/font/google'
 import './globals.css'
+import { Sidebar } from '@/components/layout/Sidebar'
+import { MobileNav } from '@/components/layout/MobileNav'
 
 const cormorant = Cormorant_Garamond({
   subsets: ['latin'],
   weight: ['300', '400', '500', '600', '700'],
   variable: '--font-cormorant',
+  display: 'swap',
+})
+
+const inter = Inter({
+  subsets: ['latin'],
+  weight: ['300', '400', '500', '600'],
+  variable: '--font-inter',
   display: 'swap',
 })
 
@@ -28,9 +37,18 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" className={`${cormorant.variable} ${notoSerifTibetan.variable}`}>
-      <body className="min-h-screen bg-bodhi-bg-dark font-serif antialiased">
-        {children}
+    <html lang="en" className={`${cormorant.variable} ${inter.variable} ${notoSerifTibetan.variable}`}>
+      <body className="min-h-screen bg-bodhi-bg-primary antialiased">
+        {/* Desktop sidebar */}
+        <Sidebar />
+
+        {/* Main content area */}
+        <main className="md:ml-[240px] min-h-screen pb-20 md:pb-0">
+          {children}
+        </main>
+
+        {/* Mobile bottom nav */}
+        <MobileNav />
       </body>
     </html>
   )

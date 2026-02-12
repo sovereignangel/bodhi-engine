@@ -31,6 +31,12 @@ export const shamathaStages: ShamathaStage[] = [
       description: 'Can you complete a session without giving up?',
       proxy: 'Session completion rate',
     },
+    brownNotes: {
+      technique: 'Setting up (bzhag pa): Begin by watching the breath as an "event" — observe each breath-moment as a discrete arising without trying to control it. Brown emphasizes distinguishing between watching the breath as an event versus searching for mind itself.',
+      tibetanTerm: 'བཞག་པ',
+      transliteration: 'bzhag pa',
+      keyInsight: 'Brown identifies that most beginners fail because they try to concentrate on the breath rather than simply recognizing each breath-event. The shift from "doing" to "recognizing" is the key to placement.',
+    },
   },
   {
     stage: 2,
@@ -58,6 +64,12 @@ export const shamathaStages: ShamathaStage[] = [
     metrics: {
       description: 'Can you notice when the mind wanders?',
       proxy: 'Self-reported awareness of distraction',
+    },
+    brownNotes: {
+      technique: 'Staying (gnas pa): Brown introduces "staying" as the key skill — the mind begins to stay with the object for brief intervals. The practitioner learns to recognize the difference between "staying" and "not staying" (ma gnas pa).',
+      tibetanTerm: 'གནས་པ',
+      transliteration: 'gnas pa',
+      keyInsight: 'Brown distinguishes between "partial staying" and "genuine staying." At this stage, what feels like concentration is often just reduced mental elaboration (spros pa) rather than true single-pointed focus.',
     },
   },
   {
@@ -87,6 +99,12 @@ export const shamathaStages: ShamathaStage[] = [
       description: 'How quickly do you return after distraction?',
       proxy: 'Average time to notice wandering',
     },
+    brownNotes: {
+      technique: 'Recognizing mental elaboration (spros pa): Brown identifies this stage as when the practitioner first clearly sees how "mental elaboration" — the proliferation of thought chains — is the primary obstacle. The instruction is to "cut" elaboration at its root.',
+      tibetanTerm: 'སྤྲོས་པ',
+      transliteration: 'spros pa',
+      keyInsight: 'Brown\'s key contribution: "mental elaboration" (spros pa) is not just distraction but the mind\'s habitual tendency to construct narratives. Recognizing this pattern is more important than forcing concentration.',
+    },
   },
   {
     stage: 4,
@@ -114,6 +132,12 @@ export const shamathaStages: ShamathaStage[] = [
     metrics: {
       description: 'Can you maintain the object throughout a session?',
       proxy: 'Consecutive sessions without losing object',
+    },
+    brownNotes: {
+      technique: 'Tightening (dam por bya ba): Brown describes "tightening" concentration — holding the object more firmly while maintaining clarity. The practitioner learns to distinguish between genuine stability and "sinking" (bying ba), where the mind appears still but has lost vividness.',
+      tibetanTerm: 'དམ་པོར་བྱ་བ',
+      transliteration: 'dam por bya ba',
+      keyInsight: 'Brown warns that many meditators mistake dull stability for genuine shamatha. The critical test: is the object vivid and clear, or merely present? "Sinking" feels peaceful but lacks the luminous clarity of true concentration.',
     },
   },
   {
@@ -143,6 +167,12 @@ export const shamathaStages: ShamathaStage[] = [
       description: 'Do you look forward to practice?',
       proxy: 'Self-reported enjoyment and streak length',
     },
+    brownNotes: {
+      technique: 'Staying properly (legs par gnas pa): Brown describes the transition from effortful to natural staying. The practitioner develops "skill" (rtsal) — the mind naturally inclines toward the object. He introduces "taking mind as the object" (sems nyid) as an alternative practice.',
+      tibetanTerm: 'ལེགས་པར་གནས་པ',
+      transliteration: 'legs par gnas pa',
+      keyInsight: 'Brown identifies this as the pivotal stage where meditation shifts from "doing something" to "being a certain way." The practitioner discovers that the mind has its own momentum toward stillness when elaboration is released.',
+    },
   },
   {
     stage: 6,
@@ -170,6 +200,12 @@ export const shamathaStages: ShamathaStage[] = [
     metrics: {
       description: 'Is practice free of struggle?',
       proxy: 'Session duration and self-reported ease',
+    },
+    brownNotes: {
+      technique: 'Intensifying (\'dzin pa): Brown describes "taking hold" of clarity with increasing precision. The practitioner works with three levels of mind: coarse (rags pa), subtle (phra ba), and very subtle (shin tu phra ba). At this stage, coarse mind settles and subtle mind becomes the focus.',
+      tibetanTerm: 'འཛིན་པ',
+      transliteration: '\'dzin pa',
+      keyInsight: 'Brown\'s three-level model of mind is unique: most traditions only distinguish coarse and subtle. His "very subtle mind" corresponds to the substrate consciousness (alaya-vijnana) and becomes the basis for later Mahamudra recognition.',
     },
   },
   {
@@ -199,6 +235,12 @@ export const shamathaStages: ShamathaStage[] = [
       description: 'Can you maintain clarity without struggle?',
       proxy: 'Extended session length with maintained clarity',
     },
+    brownNotes: {
+      technique: 'Concentration without support (rten med): Brown introduces "samadhi without support" — the practitioner releases the meditation object and rests in bare awareness itself. This prepares the mind for the transition to Mahamudra practice.',
+      tibetanTerm: 'རྟེན་མེད',
+      transliteration: 'rten med',
+      keyInsight: 'Brown identifies this as the critical juncture between ordinary shamatha and Mahamudra. The practitioner discovers that awareness does not need an object to be stable — awareness itself is naturally luminous and stable.',
+    },
   },
   {
     stage: 8,
@@ -226,6 +268,12 @@ export const shamathaStages: ShamathaStage[] = [
       description: 'Does stability arise with minimal effort?',
       proxy: 'Time to establish stability at session start',
     },
+    brownNotes: {
+      technique: 'Extraordinary samadhi (thun mong ma yin pa\'i ting nge \'dzin): Brown describes how at this stage the practitioner can access "extraordinary" states where the distinction between meditation and post-meditation begins to dissolve. The mind stream (rgyud) becomes continuous.',
+      tibetanTerm: 'ཐུན་མོང་མ་ཡིན་པའི་ཏིང་ངེ་འཛིན',
+      transliteration: 'thun mong ma yin pa\'i ting nge \'dzin',
+      keyInsight: 'Brown notes that this stage maps to the first yoga of Mahamudra — One-Pointedness (rtse gcig). The practitioner\'s concentrated mind is now a suitable vessel for receiving the pointing-out instructions from the guru.',
+    },
   },
   {
     stage: 9,
@@ -252,6 +300,12 @@ export const shamathaStages: ShamathaStage[] = [
     metrics: {
       description: 'Is stability completely effortless?',
       proxy: 'Effortless sustained attention',
+    },
+    brownNotes: {
+      technique: 'Automatic settling (rang bzhag): Brown describes this as the mind\'s natural settling into its own ground. Pliancy (shin sbyangs) arises — a physical and mental bliss that signals genuine shamatha has been achieved. This is the foundation for both ordinary vipashyana and the extraordinary Mahamudra path.',
+      tibetanTerm: 'རང་བཞག',
+      transliteration: 'rang bzhag',
+      keyInsight: 'Brown emphasizes that completed shamatha is not the goal but the prerequisite. The perfectly still mind becomes like a clear lake in which the nature of mind can be directly recognized. This is where "Pointing Out the Great Way" truly begins.',
     },
   },
 ]

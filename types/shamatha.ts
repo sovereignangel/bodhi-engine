@@ -21,6 +21,14 @@ export interface ShamathaStage {
     description: string
     proxy: string // App metric that approximates this stage
   }
+
+  // Daniel P. Brown's "Pointing Out the Great Way" enrichment
+  brownNotes?: {
+    technique: string // Brown's specific instruction for this stage
+    tibetanTerm: string // Key Tibetan term Brown uses
+    transliteration: string
+    keyInsight: string // Brown's unique contribution for this stage
+  }
 }
 
 export interface ElephantPathProgress {
